@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Medicare</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Login in</string>
+    <string name="welcome">"Selamat Datang"</string>
+    <string name="login_text">Login</string>
+    <string name="register_text">Register</string>
+    <string name="lupa_password">Lupa password?</string>
+    <string name="login_text_message">Login ke akun mu"</string>
+    <string name="invalid_username">Username tidak valid</string>
+    <string name="invalid_password">Password harus lebih dari 5 karakter</string>
+    <string name="login_failed">"Login gagal"</string>
+</resources>
