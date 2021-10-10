@@ -4,8 +4,11 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import android.content.Intent;
 import android.util.Patterns;
 
+import com.example.medicare.MainActivity;
+import com.example.medicare.RegisterActivity;
 import com.example.medicare.data.LoginRepository;
 import com.example.medicare.data.Result;
 import com.example.medicare.data.model.LoggedInUser;

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/beranda"
+        android:title="@string/beranda"
+        android:icon="@drawable/ic_baseline_home_24"
+        />
+    <item android:title="@string/transaksi"
+        android:id="@+id/transaksi"
+        android:icon="@drawable/ic_baseline_history_24"
+        />
+    <item android:title="@string/jadwal"
+        android:id="@+id/jadwal"
+        android:icon="@drawable/ic_baseline_access_alarms_24"/>
+    <item android:title="@string/tenaga_medis"
+        android:id="@+id/telepon"
+        android:icon="@drawable/ic_baseline_call_24"/>
+    <item android:title="@string/profil"
+        android:id="@+id/profile"
+        android:icon="@drawable/ic_baseline_account_circle_24"/>
+</menu>

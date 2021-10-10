@@ -7,9 +7,18 @@
     tools:context=".Onboarding"
     android:orientation="vertical">
 
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        app:srcCompat="@drawable/logohorizontal" />
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+       />
 
     <com.smarteist.autoimageslider.SliderView
         android:id="@+id/imageSlider"
@@ -25,28 +34,31 @@
         app:sliderIndicatorPadding="3dp"
         app:sliderIndicatorRadius="2dp"
         app:sliderIndicatorSelectedColor="@color/mainColor"
-        app:sliderIndicatorUnselectedColor="#FFF"
+        app:sliderIndicatorUnselectedColor="@color/lightgray"
         app:sliderScrollTimeInSec="1"
         app:sliderStartAutoCycle="true" />
 
     <Button
         android:id="@+id/toLogin"
-        android:layout_width="200dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="@color/mainColor"
         android:fontFamily="@font/poppinsregular"
         android:text="@string/login_text"
         android:textColor="#FFFFFF"
-        android:radius="20dp"/>
+        android:layout_marginTop="20dp"
+        android:radius="50dp"
+        android:textAllCaps="false"/>
     <Button
         android:id="@+id/toRegister"
-        android:layout_width="200dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="@color/mainColor"
         android:fontFamily="@font/poppinsregular"
         android:text="@string/register_text"
         android:textColor="#FFFFFF"
-        android:radius="20dp"/>
+        android:radius="50dp"
+        android:textAllCaps="false"/>
 </LinearLayout>

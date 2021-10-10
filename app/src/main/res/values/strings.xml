@@ -13,4 +13,12 @@
     <string name="invalid_username">Username tidak valid</string>
     <string name="invalid_password">Password harus lebih dari 5 karakter</string>
     <string name="login_failed">"Login gagal"</string>
+    <string name="register_text_message">"Daftar akun mu"</string>
+    <!--Untuk Menu-->
+    <string name="beranda">Beranda</string>
+    <string name="transaksi">Transaksi</string>
+    <string name="tenaga_medis">Telepon</string>
+    <string name="jadwal">Jadwal</string>
+    <string name="profil">Profile</string>
+
 </resources>

@@ -5,6 +5,7 @@ import android.app.Activity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -18,16 +19,20 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.medicare.MainActivity;
+import com.example.medicare.Onboarding;
 import com.example.medicare.R;
+import com.example.medicare.RegisterActivity;
 import com.example.medicare.ui.login.LoginViewModel;
 import com.example.medicare.ui.login.LoginViewModelFactory;
 import com.example.medicare.databinding.ActivityLoginBinding;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity implements  View.OnClickListener{
 
     private LoginViewModel loginViewModel;
     private ActivityLoginBinding binding;
@@ -122,15 +127,30 @@ public class LoginActivity extends AppCompatActivity {
                         passwordEditText.getText().toString());
             }
         });
+
+        ImageButton backlogin = findViewById(R.id.arrowButton);
+        backlogin.setOnClickListener(this);
     }
 
     private void updateUiWithUser(LoggedInUserView model) {
         String welcome = getString(R.string.welcome) + model.getDisplayName();
         // TODO : initiate successful logged in experience
         Toast.makeText(getApplicationContext(), welcome, Toast.LENGTH_LONG).show();
+        Intent intentToHome = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intentToHome);
     }
 
     private void showLoginFailed(@StringRes Integer errorString) {
         Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.arrowButton:
+                Intent loginIntent = new Intent(LoginActivity.this, Onboarding.class);
+                startActivity(loginIntent);
+                break;
+        }
     }
 }
