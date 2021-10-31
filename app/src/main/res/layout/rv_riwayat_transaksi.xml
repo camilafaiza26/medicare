@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:background="@drawable/rounded_corner"
+    android:layout_marginTop="15dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_foto_obat"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        tools:src="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/img_foto_obat"
+        android:layout_toRightOf="@id/img_foto_obat"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_nama_obat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="Nama Obat" />
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/txt_waktu_transaksi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="50dp"
+                tools:text="Waktu transaksi" />
+
+            <TextView
+                android:id="@+id/txt_status_pembelian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/txt_waktu_transaksi"
+                tools:text="Completed" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/txt_jumlah_obat"
+                android:layout_width="50dp"
+                android:maxWidth="50dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="3dp"
+                tools:text="1 item" />
+
+            <TextView
+                android:id="@+id/txt_total_harga_obat"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="25dp"
+                android:layout_toRightOf="@+id/txt_jumlah_obat"
+                android:maxWidth="95dp"
+                tools:text="Rp 120.000" />
+
+            <ImageButton
+                android:id="@+id/btn_beli_lagi"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/txt_total_harga_obat"
+                android:backgroundTint="@color/mainColor"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:srcCompat="@drawable/ic_round_shopping_bag_24"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

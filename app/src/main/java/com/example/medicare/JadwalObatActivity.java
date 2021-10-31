@@ -12,12 +12,16 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.example.medicare.ui.login.LoginActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class JadwalObatActivity extends AppCompatActivity {
+public class JadwalObatActivity extends AppCompatActivity implements  View.OnClickListener {
     BottomNavigationView bottomNavigationView;
+    ImageButton backbutton3;
+    Button tambahjadwal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +29,12 @@ public class JadwalObatActivity extends AppCompatActivity {
         setContentView(R.layout.activity_jadwal_obat);
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
-
         bottomNavigationView.setSelectedItemId(R.id.jadwal);
+
+        backbutton3 = findViewById(R.id.backButton3);
+        backbutton3.setOnClickListener(this);
+        tambahjadwal = findViewById(R.id.tambahjadwal);
+        tambahjadwal.setOnClickListener(this);
 
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -59,5 +67,19 @@ public class JadwalObatActivity extends AppCompatActivity {
 
 
 
+    }
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.backButton3:
+                Intent jadwalIntent = new Intent(JadwalObatActivity.this, MainActivity.class);
+                startActivity(jadwalIntent);
+                break;
+            case R.id.tambahjadwal:
+                Intent tambahjadwalIntent = new Intent(JadwalObatActivity.this, TambahJadwalObat.class);
+                startActivity(tambahjadwalIntent);
+                break;
+
+        }
     }
 }

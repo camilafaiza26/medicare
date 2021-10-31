@@ -20,5 +20,26 @@
     <string name="tenaga_medis">Telepon</string>
     <string name="jadwal">Jadwal</string>
     <string name="profil">Profile</string>
+    <!--UI Profile-->
+    <string name="logout">Logout</string>
+    <string name="nama">Budi Susanto</string>
+    <string name="email">BudiSusanto@gmail.com</string>
+    <string name="textUmur">Umur</string>
+    <string name="textBerat">Berat</string>
+    <string name="textTinggi">Tinggi</string>
+    <string name="riwayattrans">Riwayat Transaksi</string>
+    <string name="remainderobat">Remainder Obat</string>
+    <!--UI Jadwal Obat-->
+    <string name="jadwalobat">Jadwal Minum Obat</string>
+    <string name="jadwalharian">Jadwal Harian</string>
+    <string name="tambahjadwal">Tambah Jadwal</string>
+    <string name="jadwalobat2">Input Jadwal Obat</string>
+    <string name="namaobat">Nama Obat</string>
+    <string name="textNamaObat">Oxydosin</string>
+    <string name="keterangan">Jumlah Obat dan Berapa lama?</string>
+    <string name="jumlahpil">2 pil</string>
+    <string name="jangkawaktu">30 days</string>
+    <string name="urutanminum">Makanan dan Obat</string>
+    <string name="SimpanJadwal">Tambah Jadwal</string>
 
 </resources>

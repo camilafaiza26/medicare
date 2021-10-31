@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Medicare">
         <activity
+            android:name=".TambahJadwalObat"
+            android:exported="true" />
+        <activity
             android:name=".TenagaMedisActivity"
             android:exported="true" />
         <activity

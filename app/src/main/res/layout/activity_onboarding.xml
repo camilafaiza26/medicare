@@ -7,29 +7,17 @@
     tools:context=".Onboarding"
     android:orientation="vertical">
 
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="20dp"
-        app:srcCompat="@drawable/logohorizontal" />
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-       />
 
     <com.smarteist.autoimageslider.SliderView
         android:id="@+id/imageSlider"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="550dp"
         app:sliderAnimationDuration="600"
         app:sliderAutoCycleDirection="back_and_forth"
         app:sliderAutoCycleEnabled="true"
         app:sliderIndicatorAnimationDuration="600"
         app:sliderIndicatorGravity="center_horizontal|bottom"
-        app:sliderIndicatorMargin="15dp"
+        app:sliderIndicatorMargin="0dp"
         app:sliderIndicatorOrientation="horizontal"
         app:sliderIndicatorPadding="3dp"
         app:sliderIndicatorRadius="2dp"
@@ -37,19 +25,20 @@
         app:sliderIndicatorUnselectedColor="@color/lightgray"
         app:sliderScrollTimeInSec="1"
         app:sliderStartAutoCycle="true" />
-
     <Button
         android:id="@+id/toLogin"
         android:layout_width="250dp"
-        android:layout_height="wrap_content"
+        android:layout_height="49dp"
         android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_all_button"
         android:backgroundTint="@color/mainColor"
         android:fontFamily="@font/poppinsregular"
-        android:text="@string/login_text"
-        android:textColor="#FFFFFF"
-        android:layout_marginTop="20dp"
+        android:layout_marginBottom="6dp"
         android:radius="50dp"
-        android:textAllCaps="false"/>
+        android:text="@string/login_text"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF" />
     <Button
         android:id="@+id/toRegister"
         android:layout_width="250dp"
@@ -57,6 +46,7 @@
         android:layout_gravity="center"
         android:backgroundTint="@color/mainColor"
         android:fontFamily="@font/poppinsregular"
+        android:background="@drawable/custom_all_button"
         android:text="@string/register_text"
         android:textColor="#FFFFFF"
         android:radius="50dp"

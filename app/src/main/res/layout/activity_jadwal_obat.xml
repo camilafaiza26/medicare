@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".JadwalObatActivity">
 
+    <ImageButton
+        android:id="@+id/backButton3"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/trans"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_outline_arrow_back_ios_18" />
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
@@ -19,15 +30,50 @@
         android:background="@drawable/custom_bottom_menu"
         app:itemIconTint="@drawable/selector_buttom_menu"
         app:itemRippleColor="@color/lightgray"
-        />
+        >
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/jadwalobat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Jadwal Obat"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="200dp"
+        android:text="@string/jadwalobat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/backButton3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="250dp"
+        android:layout_height="261dp"
+        android:layout_marginTop="60dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/jadwalobat"
+        app:srcCompat="@drawable/four" />
+
+    <TextView
+        android:id="@+id/jadwalharian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/jadwalharian"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+
+    <Button
+        android:id="@+id/tambahjadwal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/tambahjadwal"
+        app:backgroundTint="#2899F3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
