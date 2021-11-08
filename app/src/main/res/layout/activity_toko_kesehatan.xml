@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TokoKesehatanActivity">
+
+
+    <TextView
+        android:id="@+id/txtTokoKesehatan"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="200dp"
+
+        android:gravity="center"
+        android:text="@string/toko_kesehatan"
+        android:textColor="@color/black1"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/backButtonHome"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/backButtonHome"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/trans"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_outline_arrow_back_ios_18"
+        app:tint="@color/black1"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
+    <ImageButton
+        android:id="@+id/btn_riwayat"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/trans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/txtTokoKesehatan"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_history_24"
+        app:tint="@color/black1"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
+    <ImageView
+        android:id="@+id/ic_maps"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/backButtonHome"
+        app:srcCompat="@drawable/ic_maps" />
+
+    <TextView
+        android:id="@+id/txtmaps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="18dp"
+        android:text="Jl. Manyar Andalas"
+        android:textColor="@color/black1"
+        app:layout_constraintStart_toEndOf="@id/ic_maps"
+        app:layout_constraintTop_toBottomOf="@id/txtTokoKesehatan" />
+
+    <ImageButton
+        android:id="@+id/btn_editmaps"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/trans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/txtmaps"
+        app:layout_constraintTop_toBottomOf="@id/btn_riwayat"
+        app:srcCompat="@drawable/ic_baseline_edit_24"
+        app:tint="@color/black1"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchObat"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/custominput"
+        app:iconifiedByDefault="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_editmaps"
+        app:queryHint="Cari Obat" />
+
+
+    <TextView
+        android:id="@+id/txtPilih"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="Pilih Produk Kesehatan"
+        android:textColor="@color/mainColor"
+        android:textSize="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchObat" />
+
+    <ImageButton
+        android:id="@+id/btn_cat1_1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/ligtgray5"
+        android:src="@drawable/ic_home_menu1_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtPilih" />
+
+    <ImageButton
+        android:id="@+id/btn_cat1_2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/ligtgray5"
+        android:src="@drawable/ic_home_menu1_1"
+        app:layout_constraintStart_toEndOf="@id/btn_cat1_1"
+        app:layout_constraintTop_toBottomOf="@id/txtPilih" />
+
+    <ImageButton
+        android:id="@+id/btn_cat1_3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/ligtgray5"
+        android:src="@drawable/ic_home_menu1_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_cat1_2"
+        app:layout_constraintTop_toBottomOf="@id/txtPilih" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Onboarding"
     android:orientation="vertical"
-    android:background="@drawable/backdrop5"
+    android:background="@drawable/backdrop"
 
     >
 

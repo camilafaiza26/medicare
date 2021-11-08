@@ -14,4 +14,10 @@
         <!-- Customize your theme here. -->
         <item name="android:fontFamily">@font/poppinsregular</item>
     </style>
+    <style name="Theme.Medicare.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Medicare.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.Medicare.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

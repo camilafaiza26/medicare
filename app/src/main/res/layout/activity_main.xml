@@ -20,7 +20,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/slider_home"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="230dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
@@ -75,15 +75,17 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
-        android:text="Peduli Covid"
+        android:text="@string/peduli_covid"
+        android:textSize="18dp"
+        android:fontFamily="@font/poppinssemibold"
         android:textColor="@color/mainColor"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/slider_home" />
 
     <ImageButton
         android:id="@+id/btn_menu1_1"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
         android:layout_marginStart="32dp"
         android:backgroundTint="@color/ligtgray5"
         android:src="@drawable/ic_home_menu1_1"
@@ -92,21 +94,21 @@
 
     <TextView
         android:id="@+id/txt_menu1_1"
-        android:layout_width="70dp"
+        android:layout_width="90dp"
         android:layout_height="wrap_content"
-        android:textSize="9dp"
+        android:textSize="11sp"
         android:gravity="center"
         android:layout_marginStart="32dp"
-        android:text="Zona Covid"
-        android:textColor="@color/mainColor"
+        android:text="@string/zona_covid"
+        android:textColor="@color/black1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_menu1_1" />
 
     <ImageButton
         android:id="@+id/btn_menu1_2"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="20dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="24dp"
         android:backgroundTint="@color/ligtgray5"
         android:src="@drawable/ic_home_menu1_2"
         app:layout_constraintStart_toEndOf="@+id/btn_menu1_1"
@@ -114,64 +116,55 @@
 
     <TextView
         android:id="@+id/txt_menu1_2"
-        android:layout_width="70dp"
+        android:layout_width="90dp"
         android:layout_height="wrap_content"
-        android:textSize="9dp"
+        android:layout_marginStart="24dp"
         android:gravity="center"
-        android:layout_marginStart="20dp"
-        android:text="Berita Covid"
-        android:textColor="@color/mainColor"
+        android:text="@string/berita_covid"
+        android:textColor="@color/black1"
+        android:textSize="11sp"
         app:layout_constraintStart_toEndOf="@+id/txt_menu1_1"
         app:layout_constraintTop_toBottomOf="@+id/btn_menu1_2" />
 
     <ImageButton
         android:id="@+id/btn_menu1_3"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="20dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="24dp"
         android:backgroundTint="@color/ligtgray5"
         android:src="@drawable/ic_home_menu1_3"
         app:layout_constraintStart_toEndOf="@+id/btn_menu1_2"
         app:layout_constraintTop_toBottomOf="@+id/txtMenu1" />
 
-
     <TextView
         android:id="@+id/txt_menu1_3"
-        android:layout_width="70dp"
+        android:layout_width="90dp"
         android:layout_height="wrap_content"
-        android:textSize="9dp"
+        android:layout_marginStart="24dp"
         android:gravity="center"
-        android:layout_marginStart="20dp"
-        android:text="Treatment Covid"
-        android:textColor="@color/mainColor"
+        android:text="@string/treatment_covid"
+        android:textColor="@color/black1"
+        android:textSize="11sp"
         app:layout_constraintStart_toEndOf="@+id/txt_menu1_2"
         app:layout_constraintTop_toBottomOf="@+id/btn_menu1_3" />
-
-
-    <ImageButton
-        android:id="@+id/btn_menu1_4"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="20dp"
-        android:backgroundTint="@color/ligtgray5"
-        app:layout_constraintStart_toEndOf="@+id/btn_menu1_3"
-        app:layout_constraintTop_toBottomOf="@+id/txtMenu1" />
 
     <TextView
         android:id="@+id/txtMenu2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
-        android:text="Penunjang Kesehatan"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="@string/penunjang_kesehatan"
         android:textColor="@color/mainColor"
+        android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_menu1_1" />
 
     <ImageButton
         android:id="@+id/btn_menu2_1"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
         android:layout_marginStart="32dp"
         android:backgroundTint="@color/ligtgray5"
         app:layout_constraintStart_toStartOf="parent"
@@ -179,43 +172,44 @@
         app:layout_constraintTop_toBottomOf="@+id/txtMenu2" />
     <TextView
         android:id="@+id/txt_menu2_1"
-        android:layout_width="70dp"
+        android:layout_width="90dp"
         android:layout_height="wrap_content"
-        android:textSize="9dp"
+        android:textSize="11sp"
         android:gravity="center"
         android:layout_marginStart="32dp"
-        android:text="Toko Kesehatan"
-        android:textColor="@color/mainColor"
+        android:text="@string/toko_kesehatan"
+        android:textColor="@color/black1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_menu2_1" />
 
 
     <ImageButton
         android:id="@+id/btn_menu2_2"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="20dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="24dp"
         android:backgroundTint="@color/ligtgray5"
         android:src="@drawable/ic_home_menu2_2"
         app:layout_constraintStart_toEndOf="@+id/btn_menu2_1"
         app:layout_constraintTop_toBottomOf="@+id/txtMenu2" />
+
     <TextView
         android:id="@+id/txt_menu2_2"
-        android:layout_width="70dp"
+        android:layout_width="90dp"
         android:layout_height="wrap_content"
-        android:textSize="9dp"
+        android:layout_marginStart="24dp"
         android:gravity="center"
-        android:layout_marginStart="20dp"
-        android:text="Alarm Obat"
-        android:textColor="@color/mainColor"
+        android:text="@string/alarm_obat"
+        android:textColor="@color/black1"
+        android:textSize="11sp"
         app:layout_constraintStart_toEndOf="@+id/txt_menu2_1"
         app:layout_constraintTop_toBottomOf="@+id/btn_menu2_2" />
 
     <ImageButton
         android:id="@+id/btn_menu2_3"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="20dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="24dp"
         android:backgroundTint="@color/ligtgray5"
         android:src="@drawable/ic_home_menu2_3"
         app:layout_constraintStart_toEndOf="@+id/btn_menu2_2"
@@ -223,25 +217,15 @@
 
     <TextView
         android:id="@+id/txt_menu2_3"
-        android:layout_width="70dp"
+        android:layout_width="90dp"
         android:layout_height="wrap_content"
-        android:textSize="9dp"
+        android:layout_marginStart="24dp"
         android:gravity="center"
-        android:layout_marginStart="20dp"
-        android:text="Kalkulator BMI"
-        android:textColor="@color/mainColor"
+        android:text="@string/kalkulator_bmi"
+        android:textColor="@color/black1"
+        android:textSize="11sp"
         app:layout_constraintStart_toEndOf="@+id/txt_menu2_2"
         app:layout_constraintTop_toBottomOf="@+id/btn_menu2_2" />
-
-    <ImageButton
-        android:id="@+id/btn_menu2_4"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="20dp"
-        android:backgroundTint="@color/ligtgray5"
-
-        app:layout_constraintStart_toEndOf="@+id/btn_menu2_3"
-        app:layout_constraintTop_toBottomOf="@+id/txtMenu2" />
 
     <TextView
         android:id="@+id/txtMenu3"
@@ -249,7 +233,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
-        android:text="Informasi Obat"
+        android:text="@string/informasi_obat"
+        android:textSize="18dp"
+        android:fontFamily="@font/poppinssemibold"
         android:textColor="@color/mainColor"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_menu2_1" />
