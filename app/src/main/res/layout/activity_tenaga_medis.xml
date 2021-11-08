@@ -19,54 +19,190 @@
         app:itemIconTint="@drawable/selector_buttom_menu"
         app:itemRippleColor="@color/lightgray"
         />
-    <View
-        android:id="@+id/viewHeader"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:background="@drawable/headertwo"
-        app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
-        android:id="@+id/txtTransaksi"
-        android:layout_width="wrap_content"
+        android:id="@+id/txtTenagaMedis"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="35dp"
         android:text="Tenaga Medis"
+        android:textColor="@color/mainColor"
+        android:textSize="24dp"
         android:textStyle="bold"
-        android:textColor="@color/white"
-        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtTelep"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:text="Telepon tenaga medis terdekat hihuuhuh huhuhuhuh huhuhuhuh huhuh "
-        android:textColor="@color/white"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:text="Telepon tenaga medis dengan cepat"
+        android:textColor="@color/mainColor"
         android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTransaksi"/>
+        app:layout_constraintTop_toBottomOf="@+id/txtTenagaMedis" />
 
     <androidx.appcompat.widget.SearchView
         android:id="@+id/searchView"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/custom_search"
-        app:iconifiedByDefault="false"
-        app:queryHint="Cari rumah sakit"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="35dp"
+        android:background="@drawable/custominput"
+        app:iconifiedByDefault="false"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTelep"/>
+        app:layout_constraintTop_toBottomOf="@id/txtTelep"
+        app:queryHint="Cari tenaga medis" />
+
+    <TextView
+        android:id="@+id/txtCategori"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="16dp"
+        android:text="Categori"
+        android:textColor="@color/mainColor"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchView" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="20dp"
+
+        android:background="@drawable/custominput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtCategori"
+        app:srcCompat="@drawable/ic_covid"
+        tools:ignore="SpeakableTextPresentCheck"
+        />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="20dp"
+        android:padding="15dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitCenter"
+        android:background="@drawable/custominput"
+        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:layout_constraintTop_toBottomOf="@id/txtCategori"
+        app:srcCompat="@drawable/ic_doctor"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="35dp"
+        android:background="@drawable/custominput"
+        android:scaleType="fitCenter"
+        android:padding="15dp"
+        app:layout_constraintStart_toEndOf="@+id/imageButton3"
+        app:layout_constraintTop_toBottomOf="@id/txtCategori"
+        app:srcCompat="@drawable/ic_ambulan"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="35dp"
+        android:scaleType="fitCenter"
+        android:padding="15dp"
+        android:background="@drawable/custominput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageButton4"
+        app:layout_constraintTop_toBottomOf="@id/txtCategori"
+        app:srcCompat="@drawable/ic_pill"
+        android:text="OK"
+        />
+
+    <TextView
+        android:id="@+id/txtCovid"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="8dp"
+        android:text="COVID-19"
+        android:textAlignment="center"
+        android:textColor="@color/mainColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageButton" />
+
+    <TextView
+        android:id="@+id/txtRS"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:text="RS"
+        android:textAlignment="center"
+        android:textColor="@color/mainColor"
+        app:layout_constraintStart_toEndOf="@id/txtCovid"
+        app:layout_constraintTop_toBottomOf="@id/imageButton3" />
+
+    <TextView
+        android:id="@+id/txtAmbulance"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:text="Ambulan"
+        android:textAlignment="center"
+        android:textColor="@color/mainColor"
+        app:layout_constraintStart_toEndOf="@id/txtRS"
+        app:layout_constraintTop_toBottomOf="@id/imageButton4" />
+
+    <TextView
+        android:id="@+id/txtObat"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:text="Obat"
+        android:textAlignment="center"
+        android:textColor="@color/mainColor"
+        app:layout_constraintStart_toEndOf="@id/txtAmbulance"
+        app:layout_constraintTop_toBottomOf="@id/imageButton5" />
+
+    <TextView
+        android:id="@+id/txtPanggilan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="16dp"
+        android:text="Rumah Sakit Terdekat"
+        android:textColor="@color/mainColor"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtCovid" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_tenaga_medis"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="360dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPanggilan"
+        tools:listitem="@layout/rv_tenaga_medis" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

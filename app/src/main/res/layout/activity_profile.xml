@@ -14,9 +14,9 @@
         android:layout_marginStart="13dp"
         android:layout_marginTop="76dp"
         android:layout_marginEnd="13dp"
-        android:drawableRight="@drawable/arrow_forward_ios"
+
         android:text="@string/remainderobat"
-        app:backgroundTint="#4760EC"
+        app:backgroundTint="@color/mainColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,15 +49,14 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="426dp"
-        android:layout_height="362dp"
-        android:layout_marginTop="4dp"
-        android:scaleType="centerInside"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/backgroundbiru" />
+        app:srcCompat="@drawable/backdrop3" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -73,9 +72,10 @@
 
     <ImageButton
         android:id="@+id/backButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_marginStart="20dp"
+        android:background="@color/trans"
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -88,6 +88,10 @@
         android:layout_marginEnd="300dp"
         android:layout_marginBottom="10dp"
         android:text="@string/profil"
+        android:textSize="24dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppinssemibold"
+        android:layout_marginTop="20dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/backButton2"
@@ -111,11 +115,13 @@
     <TextView
         android:id="@+id/nama"
         android:layout_width="wrap_content"
+
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/nama"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <TextView
@@ -124,8 +130,9 @@
         android:layout_height="24dp"
         android:layout_marginTop="16dp"
         android:text="@string/email"
-        app:layout_constraintEnd_toEndOf="@+id/nama"
-        app:layout_constraintStart_toStartOf="@+id/nama"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nama" />
 
     <LinearLayout
@@ -247,9 +254,9 @@
         android:layout_marginStart="13dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="13dp"
-        android:drawableRight="@drawable/arrow_forward_ios"
+
         android:text="@string/riwayattrans"
-        app:backgroundTint="#4760EC"
+        app:backgroundTint="@color/mainColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"

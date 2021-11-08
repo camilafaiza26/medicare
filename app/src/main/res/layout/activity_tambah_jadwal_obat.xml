@@ -13,16 +13,34 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/header"
-        android:scaleType="centerCrop"/>
+        app:srcCompat="@drawable/backdrop3"
+        android:scaleType="centerCrop"
+        />
+
+    <ImageView
+        android:id="@+id/viewHeader"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/card_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/waktu" />
 
     <TextView
         android:id="@+id/jadwalobat2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="33dp"
         android:layout_marginEnd="200dp"
         android:text="@string/jadwalobat2"
+        android:fontFamily="@font/poppinssemibold"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/backButton4"
         app:layout_constraintTop_toTopOf="parent" />
@@ -31,214 +49,188 @@
         android:id="@+id/backButton4"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:background="@color/trans"
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
+        android:background="@color/trans"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_outline_arrow_back_ios_18"
-        app:tint="@color/white" />
+        app:tint="@color/white"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/waktu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="55dp"
-        android:text="08 : 45 PM"
-        android:textSize="35dp"
+        android:text="08 : 45"
+        android:textSize="40dp"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/imageView9"
         app:layout_constraintEnd_toEndOf="@+id/imageView9"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/namaobat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="30dp"
-        android:textSize="20dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="32dp"
         android:text="@string/namaobat"
+        android:textColor="@color/black1"
+        android:textSize="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+        app:layout_constraintTop_toTopOf="@id/viewHeader" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
+    <EditText
+        android:id="@+id/edit_namaObat"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:background="@drawable/white_background"
-        android:orientation="vertical"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="35dp"
+        android:autofillHints="Masukkan Nama Obat"
+        android:background="@drawable/custominput"
+        android:drawableStart="@drawable/jadwal_obat_obat"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/poppinsregular"
+        android:hint="Masukkan Nama Obatmu"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:paddingStart="17dp"
+        android:paddingEnd="12dp"
+        android:selectAllOnFocus="true"
+        android:singleLine="false"
+        android:textSize="16sp"
+        android:typeface="normal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/namaobat">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:layout_weight="1"
-                android:background="@drawable/top_button_background"
-                android:elevation="5dp"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    app:srcCompat="@drawable/umur" />
-
-                <TextView
-                    android:id="@+id/jumlahpil2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/textNamaObat"
-                    android:textAlignment="center" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:background="@drawable/white_background"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/keterangan">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:layout_weight="1"
-                android:background="@drawable/top_button_background"
-                android:elevation="5dp"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/imageView8"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    app:srcCompat="@drawable/umur" />
-
-                <TextView
-                    android:id="@+id/jumlahpil"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/jumlahpil"
-                    android:textAlignment="center" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:layout_weight="1"
-                android:background="@drawable/top_button_background"
-                android:elevation="5dp"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/imageView5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    app:srcCompat="@drawable/berat" />
-
-                <TextView
-                    android:id="@+id/jangkawaktu"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/jangkawaktu"
-                    android:textAlignment="center" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-    </LinearLayout>
-
+        app:layout_constraintTop_toBottomOf="@+id/namaobat" />
 
     <TextView
-        android:id="@+id/keterangan"
+        android:id="@+id/jumlahObat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="160dp"
-        android:text="@string/keterangan"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="10dp"
+        android:text="Jumlah obat dan durasi pemakaian"
+        android:textColor="@color/black1"
+        android:textSize="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_namaObat" />
+
+    <EditText
+        android:id="@+id/edit_jumlahObat"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="8dp"
+        android:autofillHints="2"
+        android:background="@drawable/custominput"
+        android:drawableStart="@drawable/ic_pills"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/poppinsregular"
+        android:hint="2"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:paddingStart="17dp"
+        android:paddingEnd="12dp"
+        android:selectAllOnFocus="true"
+        android:singleLine="false"
+        android:textSize="16sp"
+        android:typeface="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/jumlahObat" />
+
+    <EditText
+        android:id="@+id/edit_jumlahHari"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:autofillHints="30"
+        android:background="@drawable/custominput"
+        android:drawableStart="@drawable/ic_hari"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/poppinsregular"
+        android:hint="30"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:paddingStart="17dp"
+        android:paddingEnd="12dp"
+        android:selectAllOnFocus="true"
+        android:singleLine="false"
+        android:textSize="16sp"
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edit_jumlahObat"
+        app:layout_constraintTop_toBottomOf="@+id/jumlahObat" />
 
     <TextView
-        android:id="@+id/urutanminum"
+        android:id="@+id/obatMakan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="30dp"
-        android:text="@string/urutanminum"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="10dp"
+        android:text="Pilih aturan pemakaian"
+        android:textColor="@color/black1"
+        android:textSize="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
-    <Button
-        android:id="@+id/SimpanJadwal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:text="@string/SimpanJadwal"
-        app:backgroundTint="#1E87DA"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_jumlahObat" />
 
     <ImageButton
         android:id="@+id/imageButton"
-        android:layout_width="72dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custominput"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/urutanminum"
-        app:srcCompat="@drawable/k1" />
+        app:layout_constraintTop_toBottomOf="@+id/obatMakan"
+        app:srcCompat="@drawable/obat_makan"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
         android:id="@+id/imageButton3"
-        android:layout_width="61dp"
-        android:layout_height="44dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="30dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="25dp"
+
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custominput"
         app:layout_constraintStart_toEndOf="@+id/imageButton"
-        app:layout_constraintTop_toBottomOf="@+id/urutanminum"
-        app:srcCompat="@drawable/k2" />
+        app:layout_constraintTop_toBottomOf="@+id/obatMakan"
+        app:srcCompat="@drawable/obat_makan2"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
         android:id="@+id/imageButton4"
-        android:layout_width="64dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="30dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="35dp"
+        android:background="@drawable/custominput"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageButton3"
-        app:layout_constraintTop_toBottomOf="@+id/urutanminum"
-        app:srcCompat="@drawable/k3" />
+        app:layout_constraintTop_toBottomOf="@+id/obatMakan"
+        app:srcCompat="@drawable/obat_makan3"
+        tools:ignore="SpeakableTextPresentCheck" />
 
-
+    <Button
+        android:id="@+id/tambahjadwal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="35dp"
+        android:text="@string/tambahjadwal"
+        android:textAllCaps="false"
+        app:backgroundTint="@color/mainColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
 </androidx.constraintlayout.widget.ConstraintLayout>

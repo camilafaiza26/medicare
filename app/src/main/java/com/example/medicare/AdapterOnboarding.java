@@ -26,8 +26,8 @@ public class AdapterOnboarding extends SliderViewAdapter<AdapterOnboarding.MyVie
     @Override
     public void onBindViewHolder(MyViewHolder viewHolder, int position) {
         viewHolder.imageView.setImageResource(imageList.get(position));
-        viewHolder.imageView.getLayoutParams().height = 1305;
-        viewHolder.imageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
+        viewHolder.imageView.getLayoutParams().height = 1100;
+        viewHolder.imageView.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
     }
 
     @Override

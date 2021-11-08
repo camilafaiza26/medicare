@@ -5,13 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Onboarding"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/backdrop5"
+
+    >
 
 
     <com.smarteist.autoimageslider.SliderView
         android:id="@+id/imageSlider"
         android:layout_width="match_parent"
-        android:layout_height="550dp"
+        android:layout_marginTop="40dp"
+
+        android:layout_height="480dp"
         app:sliderAnimationDuration="600"
         app:sliderAutoCycleDirection="back_and_forth"
         app:sliderAutoCycleEnabled="true"
@@ -25,23 +30,24 @@
         app:sliderIndicatorUnselectedColor="@color/lightgray"
         app:sliderScrollTimeInSec="1"
         app:sliderStartAutoCycle="true" />
+
     <Button
         android:id="@+id/toLogin"
-        android:layout_width="250dp"
-        android:layout_height="49dp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:background="@drawable/custom_all_button"
         android:backgroundTint="@color/mainColor"
         android:fontFamily="@font/poppinsregular"
-        android:layout_marginBottom="6dp"
         android:radius="50dp"
         android:text="@string/login_text"
         android:textAllCaps="false"
         android:textColor="#FFFFFF" />
     <Button
         android:id="@+id/toRegister"
-        android:layout_width="250dp"
+        android:layout_width="150dp"
+        android:layout_marginTop="10dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="@color/mainColor"
@@ -49,6 +55,7 @@
         android:background="@drawable/custom_all_button"
         android:text="@string/register_text"
         android:textColor="#FFFFFF"
-        android:radius="50dp"
         android:textAllCaps="false"/>
+
+
 </LinearLayout>

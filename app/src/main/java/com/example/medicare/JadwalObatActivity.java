@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,13 +17,24 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.example.medicare.riwayat_transaksi.Riwayat_Transaksi;
+import com.example.medicare.riwayat_transaksi.Riwayat_Transaksi_Adapter;
+import com.example.medicare.riwayat_transaksi.Riwayat_Transaksi_Data;
+import com.example.medicare.tampil_jadwal_obat.Jadwal_Obat;
+import com.example.medicare.tampil_jadwal_obat.Jadwal_Obat_Adapter;
+import com.example.medicare.tampil_jadwal_obat.Jadwal_Obat_Data;
 import com.example.medicare.ui.login.LoginActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import java.util.ArrayList;
 
 public class JadwalObatActivity extends AppCompatActivity implements  View.OnClickListener {
     BottomNavigationView bottomNavigationView;
     ImageButton backbutton3;
     Button tambahjadwal;
+
+    private RecyclerView rvJadwalObat;
+    private ArrayList<Jadwal_Obat> list = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +49,11 @@ public class JadwalObatActivity extends AppCompatActivity implements  View.OnCli
         tambahjadwal = findViewById(R.id.tambahjadwal);
         tambahjadwal.setOnClickListener(this);
 
+        rvJadwalObat = findViewById(R.id.rv_jadwal_obat);
+        rvJadwalObat.setHasFixedSize(true);
+
+        list.addAll(Jadwal_Obat_Data.getListData());
+        showRecyclerList();
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -81,5 +99,11 @@ public class JadwalObatActivity extends AppCompatActivity implements  View.OnCli
                 break;
 
         }
+    }
+    private void showRecyclerList() {
+        rvJadwalObat.setLayoutManager(new LinearLayoutManager(this));
+        Jadwal_Obat_Adapter jadwal_obat_adapter = new Jadwal_Obat_Adapter(list);
+        rvJadwalObat.setAdapter(jadwal_obat_adapter);
+
     }
 }

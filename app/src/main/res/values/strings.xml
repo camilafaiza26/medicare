@@ -41,5 +41,9 @@
     <string name="jangkawaktu">30 days</string>
     <string name="urutanminum">Makanan dan Obat</string>
     <string name="SimpanJadwal">Tambah Jadwal</string>
+    <string name="notification">Notification</string>
+    <string name="name">Name</string>
+    <string name="homepageName">Halo, Budi Selamat Datang</string>
+    <string name="image_profile">Image Profile</string>
 
 </resources>

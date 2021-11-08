@@ -18,8 +18,8 @@ import java.util.ArrayList;
 import java.util.Locale;
 
 public class Riwayat_Transaksi_Adapter extends RecyclerView.Adapter<Riwayat_Transaksi_Adapter.ListViewHolder> {
-    private ArrayList<Riwayat_Transaksi> listRiwayatTransaksi;
 
+    private ArrayList<Riwayat_Transaksi> listRiwayatTransaksi;
     public Riwayat_Transaksi_Adapter(ArrayList<Riwayat_Transaksi> list) {
         this.listRiwayatTransaksi = list;
       }

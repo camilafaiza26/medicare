@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".JadwalObatActivity">
+    tools:context=".JadwalObatActivity"
+    android:background="@drawable/backdrop2">
 
     <ImageButton
         android:id="@+id/backButton3"
@@ -15,7 +16,8 @@
         android:background="@color/trans"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_outline_arrow_back_ios_18" />
+        app:srcCompat="@drawable/ic_outline_arrow_back_ios_18"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
@@ -34,36 +36,89 @@
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
+
     <TextView
         android:id="@+id/jadwalobat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="35dp"
         android:layout_marginEnd="200dp"
-        android:text="@string/jadwalobat"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:fontFamily="@font/poppinssemibold"
+        android:textStyle="bold"
+        android:text="Jadwal Minum Obat"
         app:layout_constraintStart_toEndOf="@+id/backButton3"
         app:layout_constraintTop_toTopOf="parent" />
 
+
+
     <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="250dp"
-        android:layout_height="261dp"
-        android:layout_marginTop="60dp"
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/backButton3"
+        android:background="@drawable/card_background"/>
+
+    <TextView
+        android:id="@+id/cardText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="Jadwal Mu"
+        android:textColor="@color/mainColor"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="@id/card"
+        app:layout_constraintTop_toTopOf="@id/card" />
+
+    <TextView
+        android:id="@+id/cardText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="Hari Ini"
+        android:textColor="@color/mainColor"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="@id/card"
+        app:layout_constraintTop_toBottomOf="@id/cardText" />
+    <TextView
+        android:id="@+id/cardText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="30dp"
+        android:text="1 dari 4 Selesai"
+        app:layout_constraintStart_toStartOf="@id/card"
+        app:layout_constraintTop_toTopOf="@id/cardText3" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:layout_marginStart="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cardText"
         app:layout_constraintTop_toBottomOf="@+id/jadwalobat"
-        app:srcCompat="@drawable/four" />
+        app:srcCompat="@drawable/jadwal_obat" />
+
 
     <TextView
         android:id="@+id/jadwalharian"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="30dp"
+        android:textSize="16dp"
+        android:fontFamily="@font/poppinssemibold"
         android:text="@string/jadwalharian"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+        app:layout_constraintTop_toBottomOf="@+id/card" />
 
     <Button
         android:id="@+id/tambahjadwal"
@@ -72,8 +127,21 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:text="@string/tambahjadwal"
-        app:backgroundTint="#2899F3"
+        android:textAllCaps="false"
+        app:backgroundTint="@color/mainColor"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+        app:layout_constraintTop_toBottomOf="@+id/card" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_jadwal_obat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="390dp"
+        android:layout_marginEnd="24dp"
+        android:paddingBottom="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tambahjadwal"
+        tools:listitem="@layout/rv_jadwal_obat" />
 </androidx.constraintlayout.widget.ConstraintLayout>

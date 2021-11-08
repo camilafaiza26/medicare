@@ -6,6 +6,254 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/backdrop5"
+        android:scaleType="fitCenter"
+        android:contentDescription="@string/name" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/slider_home"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notifikasi" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center_vertical"
+        android:text="@string/homepageName"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/notifikasi"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/corners_100"
+        android:contentDescription="@string/notification"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_user_notif" />
+
+    <ImageView
+        android:id="@+id/notifikasi"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_profile"
+        tools:srcCompat="@drawable/ic_profile"
+        android:contentDescription="@string/image_profile" />
+
+    <TextView
+        android:id="@+id/txtMenu1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="Peduli Covid"
+        android:textColor="@color/mainColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/slider_home" />
+
+    <ImageButton
+        android:id="@+id/btn_menu1_1"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="32dp"
+        android:backgroundTint="@color/ligtgray5"
+        android:src="@drawable/ic_home_menu1_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMenu1" />
+
+    <TextView
+        android:id="@+id/txt_menu1_1"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:textSize="9dp"
+        android:gravity="center"
+        android:layout_marginStart="32dp"
+        android:text="Zona Covid"
+        android:textColor="@color/mainColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_menu1_1" />
+
+    <ImageButton
+        android:id="@+id/btn_menu1_2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="20dp"
+        android:backgroundTint="@color/ligtgray5"
+        android:src="@drawable/ic_home_menu1_2"
+        app:layout_constraintStart_toEndOf="@+id/btn_menu1_1"
+        app:layout_constraintTop_toBottomOf="@+id/txtMenu1" />
+
+    <TextView
+        android:id="@+id/txt_menu1_2"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:textSize="9dp"
+        android:gravity="center"
+        android:layout_marginStart="20dp"
+        android:text="Berita Covid"
+        android:textColor="@color/mainColor"
+        app:layout_constraintStart_toEndOf="@+id/txt_menu1_1"
+        app:layout_constraintTop_toBottomOf="@+id/btn_menu1_2" />
+
+    <ImageButton
+        android:id="@+id/btn_menu1_3"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="20dp"
+        android:backgroundTint="@color/ligtgray5"
+        android:src="@drawable/ic_home_menu1_3"
+        app:layout_constraintStart_toEndOf="@+id/btn_menu1_2"
+        app:layout_constraintTop_toBottomOf="@+id/txtMenu1" />
+
+
+    <TextView
+        android:id="@+id/txt_menu1_3"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:textSize="9dp"
+        android:gravity="center"
+        android:layout_marginStart="20dp"
+        android:text="Treatment Covid"
+        android:textColor="@color/mainColor"
+        app:layout_constraintStart_toEndOf="@+id/txt_menu1_2"
+        app:layout_constraintTop_toBottomOf="@+id/btn_menu1_3" />
+
+
+    <ImageButton
+        android:id="@+id/btn_menu1_4"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="20dp"
+        android:backgroundTint="@color/ligtgray5"
+        app:layout_constraintStart_toEndOf="@+id/btn_menu1_3"
+        app:layout_constraintTop_toBottomOf="@+id/txtMenu1" />
+
+    <TextView
+        android:id="@+id/txtMenu2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:text="Penunjang Kesehatan"
+        android:textColor="@color/mainColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_menu1_1" />
+
+    <ImageButton
+        android:id="@+id/btn_menu2_1"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="32dp"
+        android:backgroundTint="@color/ligtgray5"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/ic_home_menu2_1"
+        app:layout_constraintTop_toBottomOf="@+id/txtMenu2" />
+    <TextView
+        android:id="@+id/txt_menu2_1"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:textSize="9dp"
+        android:gravity="center"
+        android:layout_marginStart="32dp"
+        android:text="Toko Kesehatan"
+        android:textColor="@color/mainColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_menu2_1" />
+
+
+    <ImageButton
+        android:id="@+id/btn_menu2_2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="20dp"
+        android:backgroundTint="@color/ligtgray5"
+        android:src="@drawable/ic_home_menu2_2"
+        app:layout_constraintStart_toEndOf="@+id/btn_menu2_1"
+        app:layout_constraintTop_toBottomOf="@+id/txtMenu2" />
+    <TextView
+        android:id="@+id/txt_menu2_2"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:textSize="9dp"
+        android:gravity="center"
+        android:layout_marginStart="20dp"
+        android:text="Alarm Obat"
+        android:textColor="@color/mainColor"
+        app:layout_constraintStart_toEndOf="@+id/txt_menu2_1"
+        app:layout_constraintTop_toBottomOf="@+id/btn_menu2_2" />
+
+    <ImageButton
+        android:id="@+id/btn_menu2_3"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="20dp"
+        android:backgroundTint="@color/ligtgray5"
+        android:src="@drawable/ic_home_menu2_3"
+        app:layout_constraintStart_toEndOf="@+id/btn_menu2_2"
+        app:layout_constraintTop_toBottomOf="@+id/txtMenu2" />
+
+    <TextView
+        android:id="@+id/txt_menu2_3"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:textSize="9dp"
+        android:gravity="center"
+        android:layout_marginStart="20dp"
+        android:text="Kalkulator BMI"
+        android:textColor="@color/mainColor"
+        app:layout_constraintStart_toEndOf="@+id/txt_menu2_2"
+        app:layout_constraintTop_toBottomOf="@+id/btn_menu2_2" />
+
+    <ImageButton
+        android:id="@+id/btn_menu2_4"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="20dp"
+        android:backgroundTint="@color/ligtgray5"
+
+        app:layout_constraintStart_toEndOf="@+id/btn_menu2_3"
+        app:layout_constraintTop_toBottomOf="@+id/txtMenu2" />
+
+    <TextView
+        android:id="@+id/txtMenu3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:text="Informasi Obat"
+        android:textColor="@color/mainColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_menu2_1" />
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
@@ -20,6 +268,7 @@
         app:itemIconTint="@drawable/selector_buttom_menu"
         app:itemRippleColor="@color/lightgray"
         />
+
 
 
 

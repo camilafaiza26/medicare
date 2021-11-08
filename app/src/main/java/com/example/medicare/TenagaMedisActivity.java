@@ -2,15 +2,29 @@ package com.example.medicare;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.medicare.riwayat_transaksi.Riwayat_Transaksi;
+import com.example.medicare.riwayat_transaksi.Riwayat_Transaksi_Adapter;
+import com.example.medicare.riwayat_transaksi.Riwayat_Transaksi_Data;
+import com.example.medicare.tenagamedis.Tenaga_Medis;
+import com.example.medicare.tenagamedis.Tenaga_Medis_Adapter;
+import com.example.medicare.tenagamedis.Tenaga_Medis_Data;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import java.util.ArrayList;
 
 public class TenagaMedisActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
+
+    private RecyclerView rvTenagaMedis;
+    private ArrayList<Tenaga_Medis> list = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +33,11 @@ public class TenagaMedisActivity extends AppCompatActivity {
 
         bottomNavigationView.setSelectedItemId(R.id.telepon);
 
+        rvTenagaMedis = findViewById(R.id.rv_tenaga_medis);
+        rvTenagaMedis.setHasFixedSize(true);
+
+        list.addAll(Tenaga_Medis_Data.getListData());
+        showRecyclerList();
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -46,6 +65,12 @@ public class TenagaMedisActivity extends AppCompatActivity {
                 return false;
             }
         });
+
+    }
+    private void showRecyclerList() {
+        rvTenagaMedis.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL, false));
+        Tenaga_Medis_Adapter tenaga_medis_adapter = new Tenaga_Medis_Adapter(list);
+        rvTenagaMedis.setAdapter(tenaga_medis_adapter );
 
     }
 }

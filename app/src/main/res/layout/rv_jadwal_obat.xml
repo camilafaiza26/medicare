@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:background="@drawable/rounded_corner"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:backgroundTint="@color/lightgray2">
+
+    <ImageView
+        android:id="@+id/img_foto_obat"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="10dp"
+        app:srcCompat="@drawable/jadwal_obat_obat"
+        tools:src="@android:color/darker_gray"
+        tools:srcCompat="@drawable/jadwal_obat_obat" />
+
+    <LinearLayout
+        android:id="@+id/jadwal"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/img_foto_obat"
+        android:layout_toRightOf="@id/img_foto_obat"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_nama_obat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            tools:text="Nama Obat" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/txt_jam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="5dp"
+
+                android:text="Jam : " />
+
+            <TextView
+                android:id="@+id/txt_waktu_obat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="6dp"
+                android:layout_toRightOf="@+id/txt_jam"
+                tools:text="10:00" />
+
+            <ImageView
+                android:id="@+id/iv_dots"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginEnd="6dp"
+
+                android:layout_toRightOf="@+id/txt_waktu_obat"
+                tools:srcCompat="@drawable/elipse" />
+
+            <TextView
+                android:id="@+id/txt_status_jadwal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/iv_dots"
+                tools:text="Status" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/next_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="right"
+        android:layout_toRightOf="@id/jadwal"
+        app:srcCompat="@drawable/ic_baseline_arrow_forward_20"
+        tools:src="@android:color/darker_gray"
+        tools:srcCompat="@drawable/ic_baseline_arrow_forward_20" />
+</RelativeLayout>
