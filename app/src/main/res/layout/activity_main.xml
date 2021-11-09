@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <include
+        android:id="@+id/slider_home"
+        layout="@layout/card_home_covid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notifikasi" />
+
     <ImageView
         android:id="@+id/imageView9"
         android:layout_width="match_parent"
@@ -17,16 +29,7 @@
         android:scaleType="fitCenter"
         android:contentDescription="@string/name" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/slider_home"
-        android:layout_width="match_parent"
-        android:layout_height="230dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/notifikasi" />
+
 
     <TextView
         android:id="@+id/textView"
@@ -68,7 +71,6 @@
         app:srcCompat="@drawable/ic_profile"
         tools:srcCompat="@drawable/ic_profile"
         android:contentDescription="@string/image_profile" />
-
     <TextView
         android:id="@+id/txtMenu1"
         android:layout_width="wrap_content"

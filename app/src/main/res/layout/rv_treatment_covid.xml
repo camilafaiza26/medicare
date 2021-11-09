@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginRight="15dp"
+    android:background="@drawable/rounded_corner"
+    android:orientation="horizontal"
+    android:padding="16dp"
+
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_foto_treatment"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        tools:src="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/txt_cuplikan"
+        android:layout_width="303dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_foto_treatment"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="61dp"
+        android:maxWidth="50dp"
+        tools:text="Jokowi menyampaikan terapi obat yang bisa digunakan oleh pasien Covid-19 untuk tanpa gejala hingga ringan." />
+
+    <ImageButton
+        android:id="@+id/imageButton7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/txt_cuplikan"
+        android:layout_alignEnd="@id/txt_cuplikan"
+        android:layout_alignBottom="@id/txt_cuplikan"
+        android:layout_marginStart="-50dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="294dp"
+        android:layout_marginBottom="-40dp"
+        android:layout_toEndOf="@+id/txt_cuplikan"
+        app:srcCompat="@android:drawable/ic_media_ff" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/img_foto_treatment"
+        android:layout_toRightOf="@id/img_foto_treatment"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_judul_treatment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="Ini obat terapi covid gejala ringan sampai berat versi " />
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="50dp"
+                tools:text="21 Hours Ago" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

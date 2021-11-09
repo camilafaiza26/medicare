@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <TextView
+            android:id="@+id/txtmeninggal"
+            android:layout_width="81dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="33dp"
+            android:layout_marginTop="32dp"
+            android:text="Meninggal"
+            android:textAllCaps="true"
+            android:textColor="@color/mainColor"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtpositif"
+            android:layout_width="80dp"
+            android:layout_height="27dp"
+            android:textAllCaps="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:text="Positif"
+            android:textColor="@color/mainColor"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/txtmeninggal"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtsembuh"
+            android:layout_width="80dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="33dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:text="Sembuh"
+            android:textColor="@color/mainColor"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtpositif"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/txtdatameninggal"
+            android:layout_width="80dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="33dp"
+            android:layout_marginTop="6dp"
+            android:textAlignment="center"
+            android:fontFamily="@font/poppinssemibold"
+            android:textColor="@color/mainColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtmeninggal"
+            tools:text="4.780.000" />
+
+        <TextView
+            android:id="@+id/txtdatapositif"
+            android:layout_width="80dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="6dp"
+            android:textAlignment="center"
+            android:fontFamily="@font/poppinssemibold"
+            android:textColor="@color/mainColor"
+            app:layout_constraintStart_toEndOf="@+id/txtdatameninggal"
+            app:layout_constraintTop_toBottomOf="@id/txtpositif"
+            tools:text="4.030.020" />
+
+        <TextView
+            android:id="@+id/txtdatasembuh"
+            android:layout_width="80dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="33dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="32dp"
+            android:textAlignment="center"
+            android:textColor="@color/mainColor"
+            android:fontFamily="@font/poppinssemibold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtdatapositif"
+            app:layout_constraintTop_toBottomOf="@id/txtsembuh"
+            tools:text="4.020.020" />
+
+        <TextView
+            android:id="@+id/txtorang1"
+            android:layout_width="81dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="33dp"
+            android:text="Orang"
+            android:textAlignment="center"
+            android:textColor="@color/mainColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtdatameninggal" />
+
+        <TextView
+            android:id="@+id/txtorang2"
+            android:layout_width="81dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="33dp"
+            android:text="Orang"
+            android:textAlignment="center"
+            android:textColor="@color/mainColor"
+            app:layout_constraintStart_toEndOf="@id/txtorang1"
+            app:layout_constraintTop_toBottomOf="@id/txtdatasembuh" />
+
+
+        <TextView
+            android:id="@+id/txtorang3"
+            android:layout_width="81dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="33dp"
+            android:text="Orang"
+            android:textAlignment="center"
+            android:textColor="@color/mainColor"
+            app:layout_constraintStart_toEndOf="@id/txtorang2"
+            app:layout_constraintTop_toBottomOf="@id/txtdatasembuh" />
+
+        <TextView
+            android:id="@+id/txtmessageAPI"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textAlignment="center"
+            android:textColor="@color/mainColor"
+            app:layout_constraintTop_toBottomOf="@id/txtorang2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
