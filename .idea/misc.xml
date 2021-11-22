@@ -3,22 +3,53 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/medicare/app/src/main/res/drawable/all_button.xml" value="0.14635416666666667" />
+        <entry key="..\:/medicare/app/src/main/res/drawable/backdrop.xml" value="0.2703125" />
+        <entry key="..\:/medicare/app/src/main/res/drawable/card_background.xml" value="0.14635416666666667" />
+        <entry key="..\:/medicare/app/src/main/res/drawable/card_header.xml" value="0.14635416666666667" />
+        <entry key="..\:/medicare/app/src/main/res/drawable/corners_100.xml" value="0.2703125" />
+        <entry key="..\:/medicare/app/src/main/res/drawable/custom_all_button.xml" value="0.13802083333333334" />
         <entry key="..\:/medicare/app/src/main/res/drawable/custom_bottom_menu.xml" value="0.14635416666666667" />
+        <entry key="..\:/medicare/app/src/main/res/drawable/custom_button_2.xml" value="0.14635416666666667" />
+        <entry key="..\:/medicare/app/src/main/res/drawable/custom_search.xml" value="0.13802083333333334" />
         <entry key="..\:/medicare/app/src/main/res/drawable/custominput.xml" value="0.14635416666666667" />
+        <entry key="..\:/medicare/app/src/main/res/drawable/ic_baseline_arrow_forward.xml" value="0.14635416666666667" />
+        <entry key="..\:/medicare/app/src/main/res/drawable/ic_baseline_arrow_forward_ios_15.xml" value="0.14635416666666667" />
+        <entry key="..\:/medicare/app/src/main/res/drawable/ic_baseline_arrow_forward_ios_24.xml" value="0.14635416666666667" />
         <entry key="..\:/medicare/app/src/main/res/drawable/ic_outline_arrow_back_ios_18.xml" value="0.14635416666666667" />
+        <entry key="..\:/medicare/app/src/main/res/drawable/ic_round_email_24.xml" value="0.13802083333333334" />
+        <entry key="..\:/medicare/app/src/main/res/drawable/rounded_corner.xml" value="0.14635416666666667" />
         <entry key="..\:/medicare/app/src/main/res/drawable/selector_buttom_menu.xml" value="0.14635416666666667" />
+        <entry key="..\:/medicare/app/src/main/res/drawable/top_button_background.xml" value="0.14635416666666667" />
         <entry key="..\:/medicare/app/src/main/res/layout-w936dp/activity_login.xml" value="0.17691256830601093" />
+        <entry key="..\:/medicare/app/src/main/res/layout/activity_detail_treatment.xml" value="0.4" />
         <entry key="..\:/medicare/app/src/main/res/layout/activity_edit_profile.xml" value="0.22282608695652173" />
-        <entry key="..\:/medicare/app/src/main/res/layout/activity_jadwal_obat.xml" value="0.1" />
-        <entry key="..\:/medicare/app/src/main/res/layout/activity_login.xml" value="0.1" />
-        <entry key="..\:/medicare/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/medicare/app/src/main/res/layout/activity_onboarding.xml" value="0.13020833333333334" />
-        <entry key="..\:/medicare/app/src/main/res/layout/activity_profile.xml" value="0.24048913043478262" />
-        <entry key="..\:/medicare/app/src/main/res/layout/activity_register.xml" value="0.1" />
-        <entry key="..\:/medicare/app/src/main/res/layout/activity_riwayat_transaksi.xml" value="0.1" />
+        <entry key="..\:/medicare/app/src/main/res/layout/activity_jadwal_obat.xml" value="0.144" />
+        <entry key="..\:/medicare/app/src/main/res/layout/activity_login.xml" value="0.264" />
+        <entry key="..\:/medicare/app/src/main/res/layout/activity_main.xml" value="0.176" />
+        <entry key="..\:/medicare/app/src/main/res/layout/activity_onboarding.xml" value="0.136" />
+        <entry key="..\:/medicare/app/src/main/res/layout/activity_profile.xml" value="0.264" />
+        <entry key="..\:/medicare/app/src/main/res/layout/activity_register.xml" value="0.128" />
+        <entry key="..\:/medicare/app/src/main/res/layout/activity_riwayat_transaksi.xml" value="0.176" />
         <entry key="..\:/medicare/app/src/main/res/layout/activity_splash_screen.xml" value="0.13020833333333334" />
-        <entry key="..\:/medicare/app/src/main/res/layout/activity_tenaga_medis.xml" value="0.24048913043478262" />
+        <entry key="..\:/medicare/app/src/main/res/layout/activity_tambah_jadwal_obat.xml" value="0.136" />
+        <entry key="..\:/medicare/app/src/main/res/layout/activity_tenaga_medis.xml" value="0.264" />
+        <entry key="..\:/medicare/app/src/main/res/layout/activity_toko_kesehatan.xml" value="0.264" />
+        <entry key="..\:/medicare/app/src/main/res/layout/activity_toko_kesehatan2.xml" value="0.25416666666666665" />
+        <entry key="..\:/medicare/app/src/main/res/layout/activity_treatment.xml" value="0.22592592592592592" />
+        <entry key="..\:/medicare/app/src/main/res/layout/card_background.xml" value="0.13020833333333334" />
+        <entry key="..\:/medicare/app/src/main/res/layout/card_home_covid.xml" value="0.264" />
+        <entry key="..\:/medicare/app/src/main/res/layout/getdatacovid.xml" value="0.11574074074074074" />
+        <entry key="..\:/medicare/app/src/main/res/layout/header_layout.xml" value="0.13020833333333334" />
+        <entry key="..\:/medicare/app/src/main/res/layout/home_slider1.xml" value="0.22592592592592592" />
         <entry key="..\:/medicare/app/src/main/res/layout/image_item.xml" value="0.13020833333333334" />
+        <entry key="..\:/medicare/app/src/main/res/layout/riwayat_transaksi.xml" value="0.13020833333333334" />
+        <entry key="..\:/medicare/app/src/main/res/layout/rv_hospital.xml" value="0.4906204906204906" />
+        <entry key="..\:/medicare/app/src/main/res/layout/rv_jadwal_obat.xml" value="0.4" />
+        <entry key="..\:/medicare/app/src/main/res/layout/rv_riwayat_transaksi.xml" value="0.264" />
+        <entry key="..\:/medicare/app/src/main/res/layout/rv_tenaga_medis.xml" value="0.4" />
+        <entry key="..\:/medicare/app/src/main/res/layout/rv_tratment_covid.xml" value="0.22592592592592592" />
+        <entry key="..\:/medicare/app/src/main/res/layout/rv_treatment_covid.xml" value="0.20244565217391305" />
         <entry key="..\:/medicare/app/src/main/res/menu/navigation_menu.xml" value="0.1" />
         <entry key="..\:/medicare/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.14635416666666667" />
       </map>
@@ -29,5 +60,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.176" />
+      </ProjectState>
+    </option>
   </component>
 </project>

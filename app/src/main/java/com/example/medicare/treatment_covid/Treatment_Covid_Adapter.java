@@ -19,23 +19,22 @@ import java.util.Locale;
 
 public class Treatment_Covid_Adapter extends RecyclerView.Adapter<Treatment_Covid_Adapter.ListViewHolder> {
     private ArrayList<Treatment_Covid> listTreatmentCovid;
+    private OnClickListener mOnClickListener;
 
-    public Treatment_Covid_Adapter(ArrayList<Treatment_Covid> list) {
+    public Treatment_Covid_Adapter(ArrayList<Treatment_Covid> list,OnClickListener onClickListener) {
         this.listTreatmentCovid = list;
+        this.mOnClickListener = onClickListener;
     }
 
     @NonNull
     @Override
-    public Treatment_Covid_Adapter.ListViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
+    public ListViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.rv_treatment_covid, viewGroup, false);
-        return new Treatment_Covid_Adapter.ListViewHolder(view);
+        return new ListViewHolder(view, mOnClickListener);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ListViewHolder holder, int position) {
-
-        Locale localeID = new Locale("in", "ID");
-        NumberFormat formatRupiah = NumberFormat.getCurrencyInstance(localeID);
 
         Treatment_Covid treatmentcovid = listTreatmentCovid.get(position);
         Glide.with(holder.itemView.getContext())
@@ -53,21 +52,34 @@ public class Treatment_Covid_Adapter extends RecyclerView.Adapter<Treatment_Covi
         return listTreatmentCovid.size();
     }
 
-    public class ListViewHolder extends RecyclerView.ViewHolder {
+    public class ListViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+
 
         TextView txtJudulTreatment;
         TextView txtUpdate;
         TextView txtCuplikan;
         ImageView imgFotoTreatment;
+        OnClickListener onClickListener;
 
-        public ListViewHolder(@NonNull View itemView) {
+        public ListViewHolder(@NonNull View itemView, OnClickListener onClickListener) {
             super(itemView);
             txtJudulTreatment = itemView.findViewById(R.id.txt_judul_treatment);
             txtUpdate = itemView.findViewById(R.id.txt_update);
             txtCuplikan = itemView.findViewById(R.id.txt_cuplikan);
             imgFotoTreatment = itemView.findViewById(R.id.img_foto_treatment);
-
+            this.onClickListener = onClickListener;
+            itemView.setOnClickListener(this);
 
         }
+        @Override
+        public void onClick(View view) {
+            onClickListener.onClickListener(getAdapterPosition());
+
+        }
+    }
+    public interface OnClickListener {
+        void onClick(View view);
+
+        void onClickListener(int position);
     }
 }

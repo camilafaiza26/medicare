@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".treatment_covid.Detail_Treatment_Activity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/txtAc_Treatment"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="200dp"
+
+        android:gravity="center"
+        android:text="Treatment Covid-19"
+        android:textColor="@color/black1"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/backButtonTR"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/backButtonTR"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/trans"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_outline_arrow_back_ios_18"
+        app:tint="@color/black1"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/txt_judul_treatment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/poppinssemibold"
+        android:textColor="@color/black1"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtAc_Treatment"
+        tools:text="Ini obat terapi covid gejala ringan sampai berat versi Jokowi" />
+    <TextView
+        android:id="@+id/txt_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        tools:text="Halo"
+        android:fontFamily="@font/poppinsregular"
+        android:textSize="14dp"
+        android:textColor="@color/black1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_judul_treatment" />
+
+    <TextView
+        android:id="@+id/txt_data_penerbit_trt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/poppinsregular"
+        tools:text="Halo"
+        android:textColor="@color/black1"
+        android:textSize="14dp"
+        app:layout_constraintStart_toEndOf="@id/txt_update"
+        app:layout_constraintTop_toBottomOf="@id/txt_judul_treatment"/>
+" />
+
+    <ImageView
+        android:id="@+id/img_foto_treatment"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_data_penerbit_trt"
+        tools:srcCompat="@drawable/tools_treatment" />
+
+    <TextView
+        android:id="@+id/txt_data_description_trt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/poppinsmedium"
+
+        android:textColor="@color/black1"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/img_foto_treatment"
+        app:layout_constraintTop_toBottomOf="@id/img_foto_treatment" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -44,6 +44,9 @@ public class MainActivity extends AppCompatActivity  implements  View.OnClickLis
         ImageButton treatmentButton= findViewById(R.id.btn_menu1_3);
         treatmentButton.setOnClickListener(this);
 
+        ImageButton tokoKesehatanButton= findViewById(R.id.btn_menu2_1);
+        tokoKesehatanButton.setOnClickListener(this);
+
         datacovidResultMeninggal = findViewById(R.id.txtdatameninggal);
         datacovidResultPositif = findViewById(R.id.txtdatapositif);
         datacovidResultSembuh = findViewById(R.id.txtdatasembuh);
@@ -117,6 +120,10 @@ public class MainActivity extends AppCompatActivity  implements  View.OnClickLis
             case R.id.btn_menu1_3:
                 Intent toTreatmentIntent= new Intent(MainActivity.this, TreatmentActivity.class);
                 startActivity(toTreatmentIntent);
+                break;
+            case R.id.btn_menu2_1:
+                Intent toTokoKesehatanIntent= new Intent(MainActivity.this, TokoKesehatanActivity.class);
+                startActivity(toTokoKesehatanIntent);
                 break;
 
         }

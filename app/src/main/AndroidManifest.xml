@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Medicare"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".treatment_covid.Detail_Treatment_Activity"
+            android:exported="true" />
+        <activity
             android:name=".TreatmentActivity"
             android:exported="true" />
         <activity
