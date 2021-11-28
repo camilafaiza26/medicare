@@ -27,7 +27,7 @@ public class TokoKesehatanActivity extends AppCompatActivity implements  View.On
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.btn_menu1_3:
+            case R.id.btn_cat1_1:
                 Intent toHalamanKategori= new Intent(TokoKesehatanActivity.this, KategoriObatActivity.class);
                 startActivity( toHalamanKategori);
                 break;
