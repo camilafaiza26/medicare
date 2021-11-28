@@ -63,5 +63,9 @@
     <string name="berita_covid">Berita Covid</string>
     <string name="alarm_obat">Alarm Obat</string>
     <string name="toko_kesehatan">Toko Kesehatan</string>
+    <string name="minyak_angin_balsam">Minyak Angin</string>
+    <string name="batuk_flu">Batuk/Flu</string>
+    <string name="ibu_anak">Ibu Anak</string>
+    <string name="kategori">Kategori Obat</string>
 
 </resources>

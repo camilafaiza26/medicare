@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Medicare"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".KategoriObatActivity"
+            android:exported="true" />
+        <activity
+            android:name=".BeritaCovidActivity"
+            android:exported="true" />
+        <activity
             android:name=".treatment_covid.Detail_Treatment_Activity"
             android:exported="true" />
         <activity
