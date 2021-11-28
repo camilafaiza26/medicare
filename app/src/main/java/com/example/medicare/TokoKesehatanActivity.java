@@ -19,6 +19,8 @@ public class TokoKesehatanActivity extends AppCompatActivity implements  View.On
 
         ImageButton treatmentButton= findViewById(R.id.btn_cat1_1);
         treatmentButton.setOnClickListener(this);
+        ImageButton treatmentButton2= findViewById(R.id.btn_cat1_2);
+        treatmentButton2.setOnClickListener(this);
 
 
     }
@@ -30,6 +32,10 @@ public class TokoKesehatanActivity extends AppCompatActivity implements  View.On
             case R.id.btn_cat1_1:
                 Intent toHalamanKategori= new Intent(TokoKesehatanActivity.this, KategoriObatActivity.class);
                 startActivity( toHalamanKategori);
+                break;
+            case R.id.btn_cat1_2:
+                Intent toHalamanKategori2= new Intent(TokoKesehatanActivity.this, KategoriObatActivity.class);
+                startActivity( toHalamanKategori2);
                 break;
 
         }
