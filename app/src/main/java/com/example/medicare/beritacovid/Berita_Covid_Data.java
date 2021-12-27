@@ -5,7 +5,7 @@ import com.example.medicare.treatment_covid.Treatment_Covid;
 
 import java.util.ArrayList;
 public class Berita_Covid_Data {
-    //Fake Data
+    //Fake RegisterData
     private static String[] judulBerita = {
             "58 Kasus Kematian Akibat Covid",
             "DKI Jakarta sumbang kasus terbanyak",

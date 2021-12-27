@@ -1,156 +1,108 @@
 package com.example.medicare.ui.login;
 
-import android.app.Activity;
-
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
-
 import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.annotation.Nullable;
-import androidx.annotation.StringRes;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.view.KeyEvent;
 import android.view.View;
-import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
-import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.medicare.API.ApiClient;
 import com.example.medicare.MainActivity;
 import com.example.medicare.Onboarding;
 import com.example.medicare.R;
-import com.example.medicare.RegisterActivity;
-import com.example.medicare.ui.login.LoginViewModel;
-import com.example.medicare.ui.login.LoginViewModelFactory;
+import com.example.medicare.SessionManager;
+import com.example.medicare.data.LoginInterface;
+import com.example.medicare.data.model.Login;
+import com.example.medicare.data.model.Data;
 import com.example.medicare.databinding.ActivityLoginBinding;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class LoginActivity extends AppCompatActivity implements  View.OnClickListener{
 
-    private LoginViewModel loginViewModel;
     private ActivityLoginBinding binding;
+    Button btnLogin;
+    EditText etEmail, etPassword;
+    String Email, Password;
+    LoginInterface loginInterface;
+    SessionManager sessionManager;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login);
+//        binding = ActivityLoginBinding.inflate(getLayoutInflater());
+//        setContentView(binding.getRoot());
+//
+//
+//        final EditText usernameEditText = binding.username;
+//        final EditText passwordEditText = binding.password;
+//        final Button loginButton = binding.login;
+//        final ProgressBar loadingProgressBar = binding.loading;
 
-        binding = ActivityLoginBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        etEmail = findViewById(R.id.txtemail);
+        etPassword = findViewById(R.id.password);
 
-        loginViewModel = new ViewModelProvider(this, new LoginViewModelFactory())
-                .get(LoginViewModel.class);
-
-        final EditText usernameEditText = binding.username;
-        final EditText passwordEditText = binding.password;
-        final Button loginButton = binding.login;
-        final ProgressBar loadingProgressBar = binding.loading;
-
-        loginViewModel.getLoginFormState().observe(this, new Observer<LoginFormState>() {
-            @Override
-            public void onChanged(@Nullable LoginFormState loginFormState) {
-                if (loginFormState == null) {
-                    return;
-                }
-                loginButton.setEnabled(loginFormState.isDataValid());
-                if (loginFormState.getUsernameError() != null) {
-                    usernameEditText.setError(getString(loginFormState.getUsernameError()));
-                }
-                if (loginFormState.getPasswordError() != null) {
-                    passwordEditText.setError(getString(loginFormState.getPasswordError()));
-                }
-            }
-        });
-
-        loginViewModel.getLoginResult().observe(this, new Observer<LoginResult>() {
-            @Override
-            public void onChanged(@Nullable LoginResult loginResult) {
-                if (loginResult == null) {
-                    return;
-                }
-                loadingProgressBar.setVisibility(View.GONE);
-                if (loginResult.getError() != null) {
-                    showLoginFailed(loginResult.getError());
-                }
-                if (loginResult.getSuccess() != null) {
-                    updateUiWithUser(loginResult.getSuccess());
-                }
-                setResult(Activity.RESULT_OK);
-
-                //Complete and destroy login activity once successful
-                finish();
-            }
-        });
-
-        TextWatcher afterTextChangedListener = new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                // ignore
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                // ignore
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                loginViewModel.loginDataChanged(usernameEditText.getText().toString(),
-                        passwordEditText.getText().toString());
-            }
-        };
-        usernameEditText.addTextChangedListener(afterTextChangedListener);
-        passwordEditText.addTextChangedListener(afterTextChangedListener);
-        passwordEditText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-
-            @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                if (actionId == EditorInfo.IME_ACTION_DONE) {
-                    loginViewModel.login(usernameEditText.getText().toString(),
-                            passwordEditText.getText().toString());
-                }
-                return false;
-            }
-        });
-
-        loginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                loadingProgressBar.setVisibility(View.VISIBLE);
-                loginViewModel.login(usernameEditText.getText().toString(),
-                        passwordEditText.getText().toString());
-            }
-        });
-
-        ImageButton backlogin = findViewById(R.id.arrowButton);
-        backlogin.setOnClickListener(this);
-    }
-
-    private void updateUiWithUser(LoggedInUserView model) {
-        String welcome = getString(R.string.welcome) + model.getDisplayName();
-        // TODO : initiate successful logged in experience
-        Toast.makeText(getApplicationContext(), welcome, Toast.LENGTH_LONG).show();
-        Intent intentToHome = new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(intentToHome);
-    }
-
-    private void showLoginFailed(@StringRes Integer errorString) {
-        Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_SHORT).show();
+        btnLogin = findViewById(R.id.btnlogin);
+        btnLogin.setOnClickListener(this);
     }
 
     @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.arrowButton:
-                Intent loginIntent = new Intent(LoginActivity.this, Onboarding.class);
-                startActivity(loginIntent);
-                break;
-        }
+    public void onClick(View view) {
+            switch (view.getId()) {
+                case R.id.arrowButton:
+                    Intent loginIntent = new Intent(LoginActivity.this, Onboarding.class);
+                    startActivity(loginIntent);
+                    break;
+                case R.id.btnlogin:
+                    Email = etEmail.getText().toString();
+                    Password = etPassword.getText().toString();
+                    login(Email,Password);
+                    break;
+            }
+    }
+
+    private void login(String email, String password) {
+
+        loginInterface = ApiClient.getClient().create(LoginInterface.class);
+        Call<Login> loginCall = loginInterface.loginResponse(email,password);
+        loginCall.enqueue(new Callback<Login>() {
+            @Override
+            public void onResponse(Call<Login> call, Response<Login> response) {
+                if(response.body() != null){
+                    Login login = response.body();
+                    Data data = login.getData();
+                    String token = data.getToken();
+                    String email = data.getEmail();
+                    String name = data.getName();
+                    String phone = data.getPhone();
+
+                    // Ini untuk menyimpan sesi
+                    sessionManager = new SessionManager(LoginActivity.this);
+                    Data loginData = response.body().getData();
+                    sessionManager.createLoginSession(loginData);
+
+                    //Ini untuk pindah
+                    Toast.makeText(LoginActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+
+                    startActivity(intent);
+                    finish();
+                } else {
+                    Toast.makeText(LoginActivity.this, "Gagal Login", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Login> call, Throwable t) {
+                Toast.makeText(LoginActivity.this, t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

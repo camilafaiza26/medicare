@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.example.medicare.ui.login.LoginActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -20,16 +21,39 @@ public class ProfileActivity extends AppCompatActivity  implements  View.OnClick
     ImageButton backbutton2;
     ImageButton toEdit;
     Button logout;
+    SessionManager sessionManager;
+    TextView pronama, proemail, prophone;
+    String nama, phone, email;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
+        sessionManager = new SessionManager(ProfileActivity.this);
+        if(!sessionManager.isLoggedIn()){
+            moveToLogin();
+        }
+
+
+        pronama = findViewById(R.id.pronama);
+        nama = sessionManager.getUserDetail().get(SessionManager.NAME);
+        pronama.setText(nama);
+
+        proemail = findViewById(R.id.proEmail);
+        email = sessionManager.getUserDetail().get(SessionManager.EMAIL);
+        proemail.setText(email);
+
+        prophone = findViewById(R.id.prophone);
+        phone = sessionManager.getUserDetail().get(SessionManager.PHONE);
+        prophone.setText(phone);
+
+
+
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.profile);
 
-         toEdit = findViewById(R.id.imageButton2);
+        toEdit = findViewById(R.id.imageButton2);
        toEdit.setOnClickListener(this);
 
         backbutton2 = findViewById(R.id.backButton2);
@@ -75,14 +99,22 @@ public class ProfileActivity extends AppCompatActivity  implements  View.OnClick
                 startActivity(profilIntent);
                 break;
             case R.id.logout:
-                Intent logoutIntent = new Intent(ProfileActivity.this, LoginActivity.class);
-                startActivity(logoutIntent);
+                sessionManager.logoutSession();
+                moveToLogin();
+
                 break;
             case R.id.imageButton2:
                 Intent toEditIntent = new Intent(ProfileActivity.this, EditProfileActivity.class);
                 startActivity(toEditIntent);
                 break;
         }
+    }
+
+    private void moveToLogin() {
+        Intent toLogin = new Intent(ProfileActivity.this, Onboarding.class);
+        toLogin.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NO_HISTORY);
+        startActivity(toLogin);
+        finish();
     }
 
 }

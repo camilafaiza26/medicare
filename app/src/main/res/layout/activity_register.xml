@@ -8,19 +8,19 @@
     tools:context=".RegisterActivity">
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginEnd="32dp"
         android:autofillHints="@string/prompt_email"
         android:background="@drawable/custominput"
-        android:drawableStart="@drawable/ic_round_email_24"
-        android:drawablePadding="2dp"
+        android:drawableStart="@drawable/ic_baseline_person_24"
+        android:drawablePadding="6dp"
         android:fontFamily="@font/poppinsregular"
-        android:hint="@string/prompt_email"
-        android:inputType="textEmailAddress"
+        android:hint="Masukkan nama"
+        android:inputType="textPersonName"
         android:minHeight="48dp"
         android:paddingStart="12dp"
         android:paddingEnd="12dp"
@@ -32,40 +32,90 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/registerMessage" />
 
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:autofillHints="@string/prompt_email"
+        android:background="@drawable/custominput"
+        android:drawableStart="@drawable/ic_baseline_call_24_blue"
+        android:drawablePadding="6dp"
+        android:fontFamily="@font/poppinsregular"
+        android:hint="Masukkan nomor telpon"
+        android:inputType="textPhonetic"
+        android:minHeight="48dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:selectAllOnFocus="true"
+        android:singleLine="false"
+        android:textSize="16sp"
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name" />
+
+    <EditText
+        android:id="@+id/emailR"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:autofillHints="Masukkan Email"
+        android:background="@drawable/custominput"
+        android:drawableStart="@drawable/ic_round_email_24"
+        android:drawablePadding="6dp"
+        android:fontFamily="@font/poppinsregular"
+        android:hint="Masukkan Email"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:selectAllOnFocus="true"
+        android:singleLine="false"
+        android:textSize="16sp"
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phone" />
+
     <Button
-        android:id="@+id/register"
+        android:id="@+id/btnregister"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
         android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
-        android:backgroundTint="@color/mainColor"
         android:background="@drawable/custom_all_button"
+        android:backgroundTint="@color/mainColor"
         android:fontFamily="@font/poppinsregular"
         android:text="@string/register_text"
+        android:textAllCaps="false"
         android:textColor="#FFFFFF"
+
         app:cornerRadius="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
-        app:layout_constraintVertical_bias="0.20"
-        android:textAllCaps="false"/>
+        app:layout_constraintTop_toBottomOf="@id/passwordR" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/passwordR"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginEnd="32dp"
         android:autofillHints="@string/prompt_password"
         android:background="@drawable/custominput"
         android:drawableStart="@drawable/ic_round_lock_24"
-        android:drawablePadding="2dp"
+        android:drawablePadding="6dp"
         android:fontFamily="@font/poppinsregular"
-        android:hint="@string/prompt_password"
+        android:hint="Masukkan Password"
         android:imeActionLabel="@string/action_sign_in_short"
         android:imeOptions="actionDone"
         android:inputType="textPassword"
@@ -78,7 +128,9 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username" />
+        app:layout_constraintTop_toBottomOf="@id/emailR" />
+
+
 
     <ProgressBar
         android:id="@+id/loading"
@@ -89,31 +141,31 @@
         android:layout_marginBottom="64dp"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/password"
-        app:layout_constraintStart_toStartOf="@+id/password"
+        app:layout_constraintEnd_toEndOf="@id/passwordR"
+        app:layout_constraintStart_toStartOf="@id/passwordR"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.3" />
 
     <ImageView
         android:id="@+id/registerheader"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
         android:layout_marginBottom="16dp"
-        android:scaleType="center"
+        android:scaleType="fitCenter"
         android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/registerMessage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/registerText"
-        app:srcCompat="@drawable/loginheader"
+        app:srcCompat="@drawable/registerimage"
         android:contentDescription="@string/app_name" />
 
     <TextView
         android:id="@+id/registerMessage"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
         android:text="@string/register_text_message"
         android:textAlignment="viewStart"
         android:textColor="@color/mainColor"
@@ -151,5 +203,30 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_outline_arrow_back_ios_18"
         tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:text="Sudah mempunyai akun?"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnregister"
+        app:layout_constraintVertical_bias="0.17" />
+
+    <TextView
+        android:id="@+id/txtRegisterToLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:text="Login"
+        android:textColor="@color/mainColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/textView23"
+        app:layout_constraintTop_toBottomOf="@+id/btnregister"
+        app:layout_constraintVertical_bias="0.17" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

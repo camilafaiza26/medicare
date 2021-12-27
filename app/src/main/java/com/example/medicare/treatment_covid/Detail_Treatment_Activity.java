@@ -27,6 +27,7 @@ public class Detail_Treatment_Activity extends AppCompatActivity  implements  Vi
 
         Intent intent = getIntent();
         Treatment_Covid treatment_covid = intent.getParcelableExtra("pilih");
+
         assert treatment_covid  != null;
         int fotoTreatment = treatment_covid .getFotoTreatment();
         String judulTreatment = treatment_covid .getJudulTreatment();

@@ -30,18 +30,41 @@
         android:contentDescription="@string/name" />
 
 
-
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="130dp"
-        android:layout_height="50dp"
+        android:id="@+id/halo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="28dp"
         android:gravity="center_vertical"
-        android:text="@string/homepageName"
+        android:text="Halo,"
         android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/nameUserHome"
         app:layout_constraintStart_toEndOf="@+id/notifikasi"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nameUserHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@id/halo"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Budi" />
+
+    <TextView
+        android:id="@+id/selamatDatang"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:gravity="center_vertical"
+        android:text="Selamat Datang"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/notifikasi"
+        app:layout_constraintTop_toBottomOf="@+id/halo" />
 
     <ImageButton
         android:layout_width="50dp"
@@ -53,7 +76,7 @@
         android:scaleType="centerInside"
         android:adjustViewBounds="true"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/textView"
+        app:layout_constraintLeft_toRightOf="@id/halo"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_user_notif" />
 

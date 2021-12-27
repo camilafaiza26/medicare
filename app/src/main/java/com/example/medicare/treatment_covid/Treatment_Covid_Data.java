@@ -6,7 +6,7 @@ import com.example.medicare.riwayat_transaksi.Riwayat_Transaksi;
 import java.util.ArrayList;
 
 public class Treatment_Covid_Data {
-    //Fake Data
+    //Fake RegisterData
     private static String[] judulTreatment = {
             "Ini obat terapi covid gejala ringan sampai berat versi ..",
             "Pertama kalinya, ini obat untuk pengobatan covid....",
@@ -41,7 +41,7 @@ public class Treatment_Covid_Data {
                     "Pasien ini tidak perlu dirawat di rumah sakit. Isolasi mandiri di rumah atau fasilitas isolasi pemerintah.\n" +
                     "\n" +
                     "Terapi pengobatan menggunakan oseltamivir atau favipiravir, Asitromisin, vitamin C, vitamin D, dan Zinc. Isolasi selama 10 hari sejak timbul gejala dan minimal 3 hari bebas gejala.",
-            "Bisnis.com, JAKARTA - The Medicines and Healthcare Products Regulatory Agency (MHRA) Inggris telah memberikan persetujuan untuk pengobatan antibodi monoklonal pertama untuk pencegahan dan pengobatan COVID-19 di Inggris. Menindaklanjuti dari tinjauan menyeluruh terhadap bukti yang dilakukan oleh MHRA, dan rekomendasi oleh Komisi Pengobatan Manusia (CHM), badan penasihat ilmiah ahli independen pemerintah, MHRA telah menyetujui Ronapreve sebagai produk kombinasi antibodi monoklonal pertama yang diindikasikan untuk digunakan dalam pencegahan dan pengobatan infeksi COVID-19 akut untuk Inggris. Dikembangkan oleh Regeneron/Roche, obat ini diberikan baik melalui suntikan atau infus dan bekerja pada lapisan sistem pernapasan di mana ia mengikat erat pada virus corona dan mencegahnya mendapatkan akses ke sel-sel sistem pernapasan. Data uji klinis yang dinilai oleh tim ilmuwan dan dokter MHRA yang berdedikasi telah menunjukkan bahwa Ronapreve dapat digunakan untuk mencegah infeksi, meningkatkan resolusi gejala infeksi COVID-19 akut, dan dapat mengurangi kemungkinan dirawat di rumah sakit karena COVID-19.\n" +
+            "Bisnis.com, JAKARTA - The Medicines and Healthcare Products Regulatory Agency (MHRA) Inggris telah memberikan persetujuan untuk pengobatan antibodi monoklonal pertama untuk pencegahan dan pengobatan COVID-19 di Inggris. Menindaklanjuti dari tinjauan menyeluruh terhadap bukti yang dilakukan oleh MHRA, dan rekomendasi oleh Komisi Pengobatan Manusia (CHM), badan penasihat ilmiah ahli independen pemerintah, MHRA telah menyetujui Ronapreve sebagai produk kombinasi antibodi monoklonal pertama yang diindikasikan untuk digunakan dalam pencegahan dan pengobatan infeksi COVID-19 akut untuk Inggris. Dikembangkan oleh Regeneron/Roche, obat ini diberikan baik melalui suntikan atau infus dan bekerja pada lapisan sistem pernapasan di mana ia mengikat erat pada virus corona dan mencegahnya mendapatkan akses ke sel-sel sistem pernapasan. RegisterData uji klinis yang dinilai oleh tim ilmuwan dan dokter MHRA yang berdedikasi telah menunjukkan bahwa Ronapreve dapat digunakan untuk mencegah infeksi, meningkatkan resolusi gejala infeksi COVID-19 akut, dan dapat mengurangi kemungkinan dirawat di rumah sakit karena COVID-19.\n" +
                     "\n" +
                     "Artikel ini telah tayang di Bisnis.com dengan judul \"Pertama Kalinya, Ini Obat untuk Pengobatan Covid-19 yang Disetujui Inggris \", Klik selengkapnya di sini: https://lifestyle.bisnis.com/read/20210822/106/1432433/pertama-kalinya-ini-obat-untuk-pengobatan-covid-19-yang-disetujui-inggris.\n" +
                     "Author: Mia Chitra Dinisari\n" +

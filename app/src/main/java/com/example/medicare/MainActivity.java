@@ -12,6 +12,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.medicare.ui.login.LoginActivity;
 import com.example.medicare.zonacovid.GetDataCovid;
 import com.example.medicare.zonacovid.JsonPlaceHolderAPI;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -30,13 +31,30 @@ public class MainActivity extends AppCompatActivity  implements  View.OnClickLis
     private TextView datacovidResultMeninggal;
     private TextView datacovidResultPositif;
     private TextView datacovidResultSembuh;
+
     private TextView messageAPI;
     private ImageButton treatmentButton;
+    SessionManager sessionManager;
 
+    TextView txthaloNama;
+    String haloNama;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        sessionManager = new SessionManager(MainActivity.this);
+        if(!sessionManager.isLoggedIn()){
+            moveToLogin();
+        }
+
+
+        txthaloNama = findViewById(R.id.nameUserHome);
+        haloNama = sessionManager.getUserDetail().get(SessionManager.NAME);
+        txthaloNama.setText(haloNama);
+
+
+
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.home);
@@ -56,7 +74,7 @@ public class MainActivity extends AppCompatActivity  implements  View.OnClickLis
         datacovidResultMeninggal = findViewById(R.id.txtdatameninggal);
         datacovidResultPositif = findViewById(R.id.txtdatapositif);
         datacovidResultSembuh = findViewById(R.id.txtdatasembuh);
-         messageAPI= findViewById(R.id.txtmessageAPI);
+        messageAPI= findViewById(R.id.txtmessageAPI);
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://api.kawalcorona.com/")
@@ -118,6 +136,13 @@ public class MainActivity extends AppCompatActivity  implements  View.OnClickLis
                 return false;
             }
         });
+    }
+
+    private void moveToLogin() {
+        Intent toLogin = new Intent(MainActivity.this, Onboarding.class);
+        toLogin.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NO_HISTORY);
+        startActivity(toLogin);
+        finish();
     }
 
     @Override

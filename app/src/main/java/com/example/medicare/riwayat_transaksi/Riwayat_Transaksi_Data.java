@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class Riwayat_Transaksi_Data {
 
-    //Fake Data
+    //Fake RegisterData
     private static String[] namaObat = {
                 "Panadol",
                 "Combi Obat Batuk",
