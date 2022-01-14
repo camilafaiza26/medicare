@@ -20,11 +20,12 @@
         app:menu="@menu/navigation_menu" />
 
     <ImageButton
-        android:id="@+id/back"
+        android:id="@+id/backToTK"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/white"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_outline_arrow_back_ios_18" />
@@ -34,12 +35,11 @@
         android:layout_width="187dp"
         android:layout_height="27dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="25dp"
-        android:fontFamily="@font/poppinssemibold"
+        android:layout_marginTop="30dp"
         android:text="@string/kategori"
         android:textColor="@color/black"
-        android:textSize="24dp"
-        app:layout_constraintStart_toEndOf="@+id/back"
+        android:textSize="18dp"
+        app:layout_constraintStart_toEndOf="@+id/backToTK"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
@@ -47,6 +47,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:backgroundTint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.841"
         app:layout_constraintStart_toEndOf="@+id/kategori"
@@ -56,11 +57,11 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_kategori_obat"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="70dp"
+        android:layout_height="700dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toBottomOf="@+id/kategori"
         tools:listitem="@layout/rv_kategori_obat" />
 

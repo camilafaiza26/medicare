@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".JadwalObatActivity"
-    android:background="@drawable/backdrop2">
+    android:background="@drawable/backdrop2"
+    tools:context=".JadwalObatActivity">
 
     <ImageButton
         android:id="@+id/backButton3"
@@ -19,56 +19,40 @@
         app:srcCompat="@drawable/ic_outline_arrow_back_ios_18"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/navigation_menu"
-        android:background="@drawable/custom_bottom_menu"
-        app:itemIconTint="@drawable/selector_buttom_menu"
-        app:itemRippleColor="@color/lightgray"
-        >
-
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
-
-
     <TextView
         android:id="@+id/jadwalobat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="35dp"
         android:layout_marginEnd="200dp"
+        android:layout_toEndOf="@+id/backButton3"
         android:fontFamily="@font/poppinssemibold"
-        android:textStyle="bold"
         android:text="Jadwal Minum Obat"
+        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/backButton3"
         app:layout_constraintTop_toTopOf="parent" />
-
-
 
     <ImageView
         android:id="@+id/card"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:layout_below="@+id/backButton3"
         android:layout_marginStart="24dp"
+        android:layout_marginTop="34dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginTop="30dp"
+        android:background="@drawable/card_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/backButton3"
-        android:background="@drawable/card_background"/>
+        app:layout_constraintTop_toBottomOf="@id/backButton3" />
 
     <TextView
         android:id="@+id/cardText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/cardText2"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="15dp"
         android:fontFamily="@font/poppinssemibold"
         android:text="Jadwal Mu"
         android:textColor="@color/mainColor"
@@ -80,68 +64,88 @@
         android:id="@+id/cardText3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/card"
         android:layout_marginStart="24dp"
+        android:layout_marginTop="42dp"
         android:fontFamily="@font/poppinssemibold"
         android:text="Hari Ini"
         android:textColor="@color/mainColor"
         android:textSize="18dp"
         app:layout_constraintStart_toStartOf="@id/card"
         app:layout_constraintTop_toBottomOf="@id/cardText" />
+
     <TextView
         android:id="@+id/cardText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/cardText3"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="14dp"
         android:text="1 dari 4 Selesai"
         app:layout_constraintStart_toStartOf="@id/card"
         app:layout_constraintTop_toTopOf="@id/cardText3" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="34dp"
+        android:text="Jadwal Harian" />
 
     <ImageView
         android:id="@+id/imageView7"
         android:layout_width="wrap_content"
         android:layout_height="250dp"
-        android:layout_marginStart="40dp"
+        android:layout_below="@+id/jadwalobat"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="13dp"
+        android:layout_toEndOf="@+id/cardText3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/cardText"
         app:layout_constraintTop_toBottomOf="@+id/jadwalobat"
         app:srcCompat="@drawable/jadwal_obat" />
 
-
-    <TextView
-        android:id="@+id/jadwalharian"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="30dp"
-        android:textSize="16dp"
-        android:fontFamily="@font/poppinssemibold"
-        android:text="@string/jadwalharian"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="609dp"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="20dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
     <Button
-        android:id="@+id/tambahjadwal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:text="@string/tambahjadwal"
+        android:id="@+id/btn_createEvent"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="112dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="305dp"
+        android:layout_toEndOf="@+id/textView2"
+        android:background="@color/red"
+        android:text="Tambah Jadwal"
         android:textAllCaps="false"
-        app:backgroundTint="@color/mainColor"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card" />
+        android:textColor="@color/white" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_jadwal_obat"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="390dp"
-        android:layout_marginEnd="24dp"
-        android:paddingBottom="70dp"
+        android:layout_height="80dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tambahjadwal"
-        tools:listitem="@layout/rv_jadwal_obat" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/navigation_menu"
+        android:background="@drawable/custom_bottom_menu"
+        app:itemIconTint="@drawable/selector_buttom_menu"
+        app:itemRippleColor="@color/lightgray"
+        />
+
+
+</RelativeLayout>

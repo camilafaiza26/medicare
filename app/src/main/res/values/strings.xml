@@ -67,5 +67,9 @@
     <string name="batuk_flu">Batuk/Flu</string>
     <string name="ibu_anak">Ibu Anak</string>
     <string name="kategori">Kategori Obat</string>
+    <string name="i_am_here">Lokasi Saya</string>
+    <string name="provider_failed">Provider Failed</string>
+    <string name="title_activity_maps2">MapsActivity2</string>
+
 
 </resources>

@@ -16,9 +16,12 @@
     <color name="lightgray3">#9B9B9B</color>
     <color name="ligtgray4">#E1E8E8</color>
     <color name="ligtgray5">#F9F6F4</color>
+    <color name="grey">#616161</color>
+    <color name="grey2">#F5F5F5</color>
     <color name="black1">#110C0B</color>
     <color name="blue1">#F7F8FB</color>
     <color name="red">#F30D0D</color>
+    <color name="blue2">#00143B</color>
 
 
 </resources>

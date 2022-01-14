@@ -9,10 +9,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.medicare.ui.login.LoginActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.datepicker.MaterialDatePicker;
+import com.google.android.material.datepicker.MaterialPickerOnPositiveButtonClickListener;
 
 public class ProfileActivity extends AppCompatActivity  implements  View.OnClickListener {
 
@@ -24,6 +28,7 @@ public class ProfileActivity extends AppCompatActivity  implements  View.OnClick
     SessionManager sessionManager;
     TextView pronama, proemail, prophone;
     String nama, phone, email;
+    ImageView   profileFoto;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -48,6 +53,19 @@ public class ProfileActivity extends AppCompatActivity  implements  View.OnClick
         phone = sessionManager.getUserDetail().get(SessionManager.PHONE);
         prophone.setText(phone);
 
+        profileFoto = findViewById(R.id.imageView2);
+        if(sessionManager.getUserDetail().get(SessionManager.IMAGE)==null){
+
+        }
+        else{
+            String url = "https://medicareapii.herokuapp.com/";
+            String urlImageg = sessionManager.getUserDetail().get(SessionManager.IMAGE);
+            String urlImage = urlImageg.substring(7);
+
+            Glide.with(this)
+                    .load(url + urlImage)
+                    .into(profileFoto);
+        }
 
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
@@ -60,6 +78,7 @@ public class ProfileActivity extends AppCompatActivity  implements  View.OnClick
         backbutton2.setOnClickListener(this);
         logout = findViewById(R.id.logout);
         logout.setOnClickListener(this);
+
 
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -90,6 +109,9 @@ public class ProfileActivity extends AppCompatActivity  implements  View.OnClick
 
         });
 
+
+
+
     }
     @Override
     public void onClick(View v) {
@@ -107,8 +129,12 @@ public class ProfileActivity extends AppCompatActivity  implements  View.OnClick
                 Intent toEditIntent = new Intent(ProfileActivity.this, EditProfileActivity.class);
                 startActivity(toEditIntent);
                 break;
+
         }
     }
+
+
+
 
     private void moveToLogin() {
         Intent toLogin = new Intent(ProfileActivity.this, Onboarding.class);

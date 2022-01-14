@@ -9,9 +9,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.example.medicare.ui.login.LoginActivity;
 import com.example.medicare.zonacovid.GetDataCovid;
 import com.example.medicare.zonacovid.JsonPlaceHolderAPI;
@@ -36,6 +38,7 @@ public class MainActivity extends AppCompatActivity  implements  View.OnClickLis
     private ImageButton treatmentButton;
     SessionManager sessionManager;
 
+    ImageView profileFoto;
     TextView txthaloNama;
     String haloNama;
     @Override
@@ -54,10 +57,26 @@ public class MainActivity extends AppCompatActivity  implements  View.OnClickLis
         txthaloNama.setText(haloNama);
 
 
+        profileFoto = findViewById(R.id.profileFoto);
+        if(sessionManager.getUserDetail().get(SessionManager.IMAGE)==null){
+
+        }
+        else{
+            String url = "https://medicareapii.herokuapp.com/";
+            String urlImageg = sessionManager.getUserDetail().get(SessionManager.IMAGE);
+            String urlImage = urlImageg.substring(7);
+
+            Glide.with(this)
+                    .load(url + urlImage)
+                    .into(profileFoto);
+        }
 
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.home);
+
+        ImageButton toZonaCovid= findViewById(R.id.btn_menu1_1);
+        toZonaCovid.setOnClickListener(this);
 
         ImageButton treatmentButton= findViewById(R.id.btn_menu1_3);
         treatmentButton.setOnClickListener(this);
@@ -163,6 +182,10 @@ public class MainActivity extends AppCompatActivity  implements  View.OnClickLis
             case R.id.btn_menu2_2:
                 Intent toJadwalIntent= new Intent(MainActivity.this, JadwalObatActivity.class);
                 startActivity(toJadwalIntent);
+                break;
+            case R.id.btn_menu1_1:
+                Intent toZona= new Intent(MainActivity.this, ZonaCovid.class);
+                startActivity(toZona);
                 break;
 
         }

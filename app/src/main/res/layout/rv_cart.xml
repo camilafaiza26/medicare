@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:background="@drawable/rounded_corner"
+    android:layout_marginTop="15dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_foto_obatC"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        tools:src="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/img_foto_obatC"
+        android:layout_toRightOf="@id/img_foto_obatC"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtnamaobatC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="Nama Obat" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            >
+
+            <TextView
+                android:id="@+id/txtKatC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:maxLines="1"
+                tools:text="akakakkaka" />
+
+            <TextView
+                android:id="@+id/txtHargaSatuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtKatC"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:maxWidth="150dp"
+
+                android:textSize="16sp"
+                tools:text="Rp.20000" />
+
+            <ImageButton
+                android:id="@+id/plusC"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/plusc"
+                android:scaleType="fitCenter"
+
+
+                android:layout_below="@id/txtKatC"
+
+                android:layout_toRightOf="@id/txtHargaSatuan"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/jumlahObatC"
+                style="@style/MyDenseOutlinedC"
+                android:layout_width="50dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtKatC"
+                android:layout_centerHorizontal="true"
+                android:layout_toRightOf="@id/plusC"
+                app:hintAnimationEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtJumlahObatC"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/white"
+                    android:maxLength="2"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageButton
+                android:id="@+id/minC"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/txtKatC"
+                android:background="@drawable/minc"
+                android:layout_toRightOf="@id/jumlahObatC"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

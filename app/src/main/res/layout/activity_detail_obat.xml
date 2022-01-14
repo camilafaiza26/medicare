@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DetailObatActivity">
+
+
+    <ImageButton
+        android:id="@+id/backToKat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/white"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_outline_arrow_back_ios_18" />
+
+    <ImageButton
+        android:id="@+id/kurang"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/txtHargaObat"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_toLeftOf="@id/jumlahObatDLyt"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitCenter"
+        android:background="@drawable/mins" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/jumlahObatDLyt"
+        style="@style/MyDenseOutlined"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtHargaObat"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        app:hintAnimationEnabled="true">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edtJumlahObatD"
+        android:layout_width="match_parent"
+        android:textColor="@color/white"
+        android:maxLength="3"
+        android:layout_height="wrap_content"
+        android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <ImageButton
+        android:id="@+id/tambah"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/txtHargaObat"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/jumlahObatDLyt"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitCenter"
+        android:background="@drawable/plus" />
+
+    <ImageView
+        android:id="@+id/imageObat"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_below="@id/backToKat"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtNamaObat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageObat"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="32dp"
+        android:fontFamily="@font/poppinssemibold"
+        android:maxLines="1"
+        android:text="Nama Obat"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+
+    <TextView
+        android:id="@+id/txtSatuanObat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtNamaObat"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:maxLines="1"
+        android:text="Per Kapsul"
+        android:textColor="@color/black1"
+        android:textSize="13dp" />
+
+    <TextView
+        android:id="@+id/txtHargaObat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtSatuanObat"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:maxLines="1"
+        android:text="Rp"
+        android:textColor="@color/black"
+        android:textSize="18dp" />
+
+    <View
+        android:id="@+id/viewOne"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/txtHargaObat"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/roundedwhite" />
+
+    <View
+        android:id="@+id/viewTwo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/txtHargaObat"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/roundedblue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewOne"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:scrollbars="vertical">
+
+            <TextView
+                android:id="@+id/indikasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:text="Indikasi Umum"
+                android:textColor="@color/mainColor"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_constraintLeft_creator=""
+                tools:layout_constraintTop_creator="1" />
+
+            <TextView
+                android:id="@+id/txtIndikasi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="32dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/indikasi"
+                tools:layout_constraintLeft_creator=""
+                tools:layout_constraintTop_creator="1" />
+
+            <TextView
+                android:id="@+id/perhatian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:text="Perhatian"
+                android:textColor="@color/mainColor"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtIndikasi"
+                tools:layout_constraintLeft_creator=""
+                tools:layout_constraintTop_creator="1" />
+
+            <TextView
+                android:id="@+id/txtPerhatian"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="32dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/perhatian"
+                tools:layout_constraintLeft_creator=""
+                tools:layout_constraintTop_creator="1" />
+
+
+            <TextView
+                android:id="@+id/frekuensi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:text="Frekuensi"
+                android:textColor="@color/mainColor"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtPerhatian"
+                tools:layout_constraintLeft_creator=""
+                tools:layout_constraintTop_creator="1" />
+
+            <TextView
+                android:id="@+id/txtFrekuensi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="32dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/frekuensi"
+                tools:layout_constraintLeft_creator=""
+                tools:layout_constraintTop_creator="1" />
+
+            <TextView
+                android:id="@+id/komposisi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:text="Komposisi"
+                android:textColor="@color/mainColor"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtFrekuensi"
+                tools:layout_constraintLeft_creator=""
+                tools:layout_constraintTop_creator="1" />
+
+            <TextView
+                android:id="@+id/txtKomposisi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="32dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/komposisi"
+                tools:layout_constraintLeft_creator=""
+                tools:layout_constraintTop_creator="1" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/toKeranjang"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/blue2"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtProduk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="32dp"
+            android:maxLines="1"
+            android:text="1"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/produk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="6dp"
+            android:layout_toRightOf="@id/txtProduk"
+
+            android:maxLines="1"
+            android:text="Produk"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+        <ImageView
+            android:id="@+id/dividerD"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/produk"
+            android:layout_marginStart="20dp"
+            android:maxLines="1"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@color/white"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/estimasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/dividerD"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:text="Estimasi Harga"
+            android:textColor="@color/white"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/txtTotalHarga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/estimasi"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="20dp"
+            android:layout_toRightOf="@id/dividerD"
+            android:fontFamily="@font/poppinssemibold"
+            android:text="Rp.200"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+        <Button
+            android:id="@+id/btnToKeranjang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="32dp"
+            android:backgroundTint="@color/white"
+            android:text="Keranjang"
+            android:textColor="@color/blue2"
+            android:textAllCaps="false"
+            android:textSize="12dp"
+            android:layout_alignParentRight="true"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -18,6 +18,8 @@ public class SessionManager {
     public static final String EMAIL = "email";
     public static final String NAME = "name";
     public static final String PHONE = "phone";
+    public static final String IMAGE = "image";
+    public static final String TOKEN = "token";
 
     public SessionManager(Context context) {
         this._context = context;
@@ -31,6 +33,8 @@ public class SessionManager {
         editor.putString(EMAIL, user.getEmail());
         editor.putString(NAME, user.getName());
         editor.putString(PHONE, user.getPhone());
+        editor.putString(IMAGE, user.getProfilePicture());
+        editor.putString(TOKEN, user.getToken());
         editor.commit();
     }
 
@@ -40,6 +44,8 @@ public class SessionManager {
         editor.putString(EMAIL, user.getEmail());
         editor.putString(NAME, user.getName());
         editor.putString(PHONE, user.getPhone());
+        editor.putString(IMAGE, user.getProfilePicture());
+        editor.putString(TOKEN, user.getToken());
         editor.commit();
     }
 
@@ -49,6 +55,8 @@ public class SessionManager {
         user.put(EMAIL, sharedPreferences.getString(EMAIL, null));
         user.put(NAME, sharedPreferences.getString(NAME, null));
         user.put(PHONE, sharedPreferences.getString(PHONE, null));
+        user.put(IMAGE, sharedPreferences.getString(IMAGE, null));
+        user.put(TOKEN, sharedPreferences.getString(TOKEN, null));
 
         return user;
     }

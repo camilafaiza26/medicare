@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toplayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@color/mainColor"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp">
+
+    <TextView
+        android:id="@+id/event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text=""
+        android:textColor="#ffffff"
+        android:textSize="17sp" />
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/event2"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:padding="5dp"-->
+    <!--        android:text=""-->
+    <!--        android:textColor="#ffffff"-->
+    <!--        android:textSize="17sp" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/event3"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:padding="5dp"-->
+    <!--        android:text=""-->
+    <!--        android:textColor="#ffffff"-->
+    <!--        android:textSize="17sp" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:paddingEnd="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:alpha=".7"
+            android:background="@drawable/ic_alarm_white_24dp" />
+
+        <TextView
+            android:id="@+id/time_and_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha=".8"
+            android:padding="10dp"
+            android:text="eentadaddafaffa"
+            android:textColor="#ffffff"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

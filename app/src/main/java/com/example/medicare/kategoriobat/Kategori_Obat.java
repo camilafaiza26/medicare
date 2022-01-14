@@ -1,40 +1,47 @@
 package com.example.medicare.kategoriobat;
 
+import javax.annotation.Generated;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
+import java.util.List;
+
+@Generated("jsonschema2pojo")
 public class Kategori_Obat {
-    public String getNamaobat() {
-        return namaobat;
+
+        @SerializedName("success")
+        @Expose
+        private Boolean success;
+        @SerializedName("data")
+        @Expose
+        private List<Data> data = null;
+        @SerializedName("message")
+        @Expose
+        private String message;
+
+        public Boolean getSuccess() {
+            return success;
+        }
+
+        public void setSuccess(Boolean success) {
+            this.success = success;
+        }
+
+        public List<Data> getData() {
+            return data;
+        }
+
+        public void setData(List<Data> data) {
+            this.data = data;
+        }
+
+        public String getMessage() {
+            return message;
+        }
+
+        public void setMessage(String message) {
+            this.message = message;
+        }
+
     }
 
-    public void setNamaobat(String namaobat) {
-        this.namaobat = namaobat;
-    }
-
-    public String getKet() {
-        return ket;
-    }
-
-    public void setKet(String ket) {
-        this.ket = ket;
-    }
-
-    public String getHarga() {
-        return harga;
-    }
-
-    public void setHarga(String harga) {
-        this.harga = harga;
-    }
-
-    public int getFotoobat() {
-        return fotoobat;
-    }
-
-    public void setFotoobat(int fotoobat) {
-        this.fotoobat = fotoobat;
-    }
-
-    private String namaobat;
-    private String ket;
-    private String harga;
-    private int fotoobat;
-}
